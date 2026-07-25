@@ -65,7 +65,7 @@ export default function ServiceLanding() {
 
   return (
     <>
-      <Seo title={service.heroTitle} description={service.metaDescription} />
+      <Seo title={service.heroTitle} description={service.metaDescription} image={service.gallery[0].img} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <JsonLd data={breadcrumbSchema} />

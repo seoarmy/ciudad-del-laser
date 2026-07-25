@@ -25,7 +25,7 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <Seo title={post.title} description={post.excerpt} />
+      <Seo title={post.title} description={post.excerpt} image={post.cover} />
       <JsonLd data={articleSchema} />
       <BlogPost post={post} />
     </>
