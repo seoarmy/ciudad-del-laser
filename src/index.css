@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-carbon: #0B0B0D;
+  --color-surface: #18181B;
+  --color-orange: #FF5C33;
+  --color-orange-dark: #E64726;
+  --color-pink: #FF2D78;
+  --color-gray-light: #FAFAFA;
+  --color-gray-lighter: #ECECEC;
+  --color-gray-text: #A1A1AA;
+  --color-green-check: #3C9D5B;
+
+  --font-heading: "Space Grotesk", "Archivo Black", sans-serif;
+  --font-body: "Geist", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-carbon);
+  background: var(--color-gray-light);
+}
+
+h1, h2, h3, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Diagonal orange -> pink gradient, the primary "tech" accent */
+.bg-accent-gradient {
+  background-image: linear-gradient(115deg, var(--color-orange) 0%, var(--color-pink) 100%);
+}
+.text-accent-gradient {
+  background-image: linear-gradient(115deg, var(--color-orange) 0%, var(--color-pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle glassmorphism, dark sections only */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Low-opacity noise overlay for dark sections, breaks up flat gradients */
+.bg-noise {
+  position: relative;
+  isolation: isolate;
+}
+.bg-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.bg-noise > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3%, -4%) scale(1.05); }
+}
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee linear infinite;
+}
