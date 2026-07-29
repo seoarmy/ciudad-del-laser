@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 import * as Icons from 'lucide-react';
-import { SERVICES } from '../data/services';
+import { SERVICES, pickRandomImage } from '../data/services';
 import { MATERIAL_FAMILIES } from '../data/materials';
 import { buildWhatsappLink } from '../data/site';
 import Seo from '../components/Seo';
@@ -8,7 +9,6 @@ import MarqueeGallery from '../components/MarqueeGallery';
 import MeshBlobs from '../components/MeshBlobs';
 import MagneticButton from '../components/MagneticButton';
 import AnimatedCounter from '../components/AnimatedCounter';
-import SpecTag from '../components/SpecTag';
 import Testimonials from '../components/Testimonials';
 import { TESTIMONIALS } from '../data/testimonials';
 import FAQAccordion from '../components/FAQAccordion';
@@ -16,28 +16,32 @@ import { GENERAL_FAQS } from '../data/faqs';
 
 const HOME_GALLERY = SERVICES.flatMap((s) => s.gallery.slice(0, 2));
 
-const [FEATURED_SERVICE, ...REST_SERVICES] = SERVICES;
-
-function BentoTile({ service }) {
+function ServiceTile({ service }) {
   const Icon = Icons[service.icon] || Icons.Scissors;
+  const image = useMemo(() => pickRandomImage(service.gallery), [service]);
   return (
     <Link
       to={`/servicios/${service.slug}`}
-      className="group relative bg-surface border border-white/10 rounded-xl p-5 flex flex-col justify-between overflow-hidden hover:border-orange/60 transition-colors"
+      className="group relative bg-surface border border-white/10 rounded-xl p-5 flex flex-col justify-between overflow-hidden hover:border-orange/60 transition-colors h-[190px]"
     >
-      <div className="flex items-center justify-between">
+      <img
+        src={image.img}
+        alt={image.alt}
+        className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-500"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/70 to-surface/20" />
+      <div className="relative flex items-center justify-between">
         <Icon className="text-orange" size={22} strokeWidth={1.5} />
         <Icons.ArrowUpRight
           className="text-gray-text opacity-0 group-hover:opacity-100 group-hover:text-orange transition-opacity"
           size={16}
         />
       </div>
-      <div>
+      <div className="relative">
         <p className="font-heading text-sm text-white leading-snug mb-2">{service.title}</p>
         <p className="text-xs text-gray-text max-h-0 group-hover:max-h-16 opacity-0 group-hover:opacity-100 transition-all duration-300 overflow-hidden">
           {service.heroSubtitle}
         </p>
-        <SpecTag parts={[service.keyword]} className="mt-2 inline-block" />
       </div>
     </Link>
   );
@@ -69,13 +73,13 @@ export default function Home() {
               href={buildWhatsappLink('Hola! Quiero cotizar un trabajo de corte/grabado láser.')}
               target="_blank"
               rel="noreferrer"
-              className="bg-accent-gradient text-white font-bold rounded-lg px-8 py-3 shadow-lg shadow-orange/20"
+              className="bg-accent-gradient text-white font-semibold rounded-lg px-8 py-3 shadow-lg shadow-orange/20"
             >
               Cotizar por WhatsApp
             </MagneticButton>
             <MagneticButton
               href="#servicios"
-              className="glass text-white font-bold rounded-lg px-8 py-3"
+              className="glass text-white font-semibold rounded-lg px-8 py-3"
             >
               Ver servicios
             </MagneticButton>
@@ -86,29 +90,12 @@ export default function Home() {
       <section id="servicios" className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <h2 className="font-heading text-2xl md:text-4xl text-center mb-3">Nuestros servicios</h2>
         <p className="text-gray-text text-center max-w-xl mx-auto mb-12">
-          Nueve líneas de trabajo especializadas, cada una con su propio proceso y materiales recomendados.
+          Diez líneas de trabajo especializadas, cada una con su propio proceso y materiales recomendados.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[170px] md:auto-rows-[190px]">
-          <Link
-            to={`/servicios/${FEATURED_SERVICE.slug}`}
-            className="group relative col-span-2 row-span-2 rounded-xl overflow-hidden bg-carbon"
-          >
-            <img
-              src={FEATURED_SERVICE.gallery[0].img}
-              alt={FEATURED_SERVICE.gallery[0].alt}
-              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/40 to-transparent" />
-            <div className="relative h-full flex flex-col justify-end p-6">
-              <SpecTag parts={[FEATURED_SERVICE.keyword]} className="mb-3 self-start" />
-              <p className="font-heading text-xl md:text-2xl text-white mb-2">{FEATURED_SERVICE.title}</p>
-              <p className="text-sm text-gray-200 max-w-sm">{FEATURED_SERVICE.heroSubtitle}</p>
-            </div>
-          </Link>
-
-          {REST_SERVICES.map((s) => (
-            <BentoTile key={s.slug} service={s} />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {SERVICES.map((s) => (
+            <ServiceTile key={s.slug} service={s} />
           ))}
         </div>
       </section>
@@ -146,7 +133,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white border border-gray-lighter rounded-xl p-8 text-center hover:border-orange transition-colors">
             <img
-              src="https://picsum.photos/seed/mate-preview/500/350"
+              src="/images/METALES/5.png"
               alt="Personalizador de mates"
               className="rounded-lg mb-6 w-full h-48 object-cover"
             />
@@ -154,14 +141,14 @@ export default function Home() {
             <p className="text-gray-text text-sm mb-6">Elegí texto, tipografía y logo para tu mate personalizado.</p>
             <Link
               to="/personalizador"
-              className="inline-block bg-accent-gradient text-white font-bold rounded-lg px-6 py-3 text-sm"
+              className="inline-block bg-accent-gradient text-white font-semibold rounded-lg px-6 py-3 text-sm"
             >
               Personalizar mate
             </Link>
           </div>
           <div className="bg-white border border-gray-lighter rounded-xl p-8 text-center hover:border-orange transition-colors">
             <img
-              src="https://picsum.photos/seed/placa-preview/500/350"
+              src="/images/PLACAS%20DE%20NICHO%20-%20CEMENTERIO/7.png"
               alt="Personalizador de placas"
               className="rounded-lg mb-6 w-full h-48 object-cover"
             />
@@ -169,7 +156,7 @@ export default function Home() {
             <p className="text-gray-text text-sm mb-6">Definí tamaño, texto y logo para tu placa a medida.</p>
             <Link
               to="/personalizador"
-              className="inline-block bg-accent-gradient text-white font-bold rounded-lg px-6 py-3 text-sm"
+              className="inline-block bg-accent-gradient text-white font-semibold rounded-lg px-6 py-3 text-sm"
             >
               Personalizar placa
             </Link>

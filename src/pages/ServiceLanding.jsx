@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
-import { getServiceBySlug } from '../data/services';
+import { useMemo } from 'react';
+import { getServiceBySlug, pickRandomImage } from '../data/services';
 import { buildWhatsappLink, SITE_URL, SITE } from '../data/site';
 import Seo from '../components/Seo';
 import JsonLd from '../components/JsonLd';
@@ -27,6 +28,8 @@ const TECHNIQUE_COMPARISON = {
 export default function ServiceLanding() {
   const { slug } = useParams();
   const service = getServiceBySlug(slug);
+
+  const randomImage = useMemo(() => (service ? pickRandomImage(service.gallery) : null), [service]);
 
   if (!service) return <Navigate to="/" replace />;
 
@@ -77,7 +80,7 @@ export default function ServiceLanding() {
             href={buildWhatsappLink(waMessage)}
             target="_blank"
             rel="noreferrer"
-            className="bg-accent-gradient text-white font-bold rounded-lg px-8 py-3"
+            className="bg-accent-gradient text-white font-semibold rounded-lg px-8 py-3"
           >
             Cotizar por WhatsApp
           </MagneticButton>
@@ -107,7 +110,7 @@ export default function ServiceLanding() {
         title={`Todo sobre ${service.shortTitle.toLowerCase()}`}
         paragraph={service.seoParagraph}
         highlights={service.highlights}
-        image={service.gallery[1] || service.gallery[0]}
+        image={randomImage}
         serviceName={service.title}
       />
 

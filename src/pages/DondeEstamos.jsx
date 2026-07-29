@@ -63,7 +63,7 @@ export default function DondeEstamos() {
           href={buildWhatsappLink('Hola! Quiero consultar si hacen envíos a mi zona.')}
           target="_blank"
           rel="noreferrer"
-          className="inline-block bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-8 py-3"
+          className="inline-block bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-8 py-3"
         >
           Consultar por WhatsApp
         </a>

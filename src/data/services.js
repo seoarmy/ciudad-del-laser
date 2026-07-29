@@ -43,8 +43,8 @@ export const SERVICES = [
       { q: '¿Cuál es el tamaño máximo de placa?', a: 'Trabajamos placas de 900x600mm y 600x300mm. Para piezas más grandes se arman por partes.' },
       { q: '¿Cuál es el precio del corte láser de MDF?', a: 'El precio depende del espesor, la superficie de corte y la cantidad de piezas. Escribinos por WhatsApp con tu diseño y te pasamos el precio sin cargo.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/mdf-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/MDF/${i + 1}.png`,
       alt: `Pieza de MDF cortada con láser ${i + 1}`,
     })),
   },
@@ -90,8 +90,8 @@ export const SERVICES = [
       { q: '¿Hacen numeración correlativa para piezas industriales?', a: 'Sí, es uno de los usos más comunes: series numeradas o códigos para trazabilidad.' },
       { q: '¿Cuál es el precio del grabado láser en metal?', a: 'Depende del material, la cantidad de piezas y el detalle del grabado. Enviános tu consulta por WhatsApp y te pasamos el precio sin cargo.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/metal-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/METALES/${i + 1}.png`,
       alt: `Grabado láser en metal ${i + 1}`,
     })),
   },
@@ -137,8 +137,8 @@ export const SERVICES = [
       { q: '¿Hacen cantidades grandes para regalos empresariales?', a: 'Sí, trabajamos tiradas de piezas iguales o personalizadas una a una (ej. con nombres distintos).' },
       { q: '¿Cuál es el precio del corte y grabado láser en madera?', a: 'Varía según el tipo de madera, el espesor y la cantidad de piezas. Consultanos por WhatsApp con tu proyecto y te damos el precio sin cargo.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/madera-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/MADERA/${i + 1}.png`,
       alt: `Corte y grabado láser en madera ${i + 1}`,
     })),
   },
@@ -184,8 +184,8 @@ export const SERVICES = [
       { q: '¿Puedo combinar acrílico transparente con grabado en la superficie?', a: 'Sí, es un combo muy pedido: grabado superficial + corte de contorno, ideal para letras y displays.' },
       { q: '¿Qué espesor conviene para letras corpóreas de pared?', a: 'Depende del tamaño de la letra: para letras chicas 3mm alcanza, para letras grandes recomendamos 5mm o más.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/acrilico-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/ACRILICO/${i + 1}.png`,
       alt: `Corte láser de acrílico ${i + 1}`,
     })),
   },
@@ -275,8 +275,8 @@ export const SERVICES = [
       { q: '¿Puedo traer mi propia placa de mármol?', a: 'Sí, podés traer o enviarnos tu placa y coordinamos el grabado sobre tu material.' },
       { q: '¿Cuál es el precio del grabado en mármol?', a: 'Depende del tamaño de la placa y el detalle del grabado. Escribinos por WhatsApp y te pasamos el precio sin cargo.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/marmol-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/MARMOL/${i + 1}.png`,
       alt: `Grabado en mármol ${i + 1}`,
     })),
   },
@@ -319,8 +319,8 @@ export const SERVICES = [
       { q: '¿Qué tan resistente es el grabado a la intemperie?', a: 'Muy resistente: al ser parte de la superficie del material, no se borra ni decolora con el sol o la lluvia.' },
       { q: '¿Hacen envío al cementerio o solo retiro?', a: 'Coordinamos envío según zona; consultanos por WhatsApp la logística para tu caso.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/nicho-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/PLACAS%20DE%20NICHO%20-%20CEMENTERIO/${i + 1}.png`,
       alt: `Placa para nicho grabada con láser ${i + 1}`,
     })),
   },
@@ -364,8 +364,8 @@ export const SERVICES = [
       { q: '¿Qué material conviene para maquetas de estudio (entrega rápida)?', a: 'Cartón o MDF 3mm suelen ser los más rápidos y económicos para entregas de facultad.' },
       { q: '¿Puedo pedir piezas transparentes para ventanas?', a: 'Sí, usamos acrílico cristal cortado a la medida exacta de cada abertura.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/maquetas-${i}/600/450`,
+    gallery: Array.from({ length: 1 }).map((_, i) => ({
+      img: `/images/MAQUETAS/${i + 1}.png`,
       alt: `Corte láser para maqueta ${i + 1}`,
     })),
   },
@@ -409,11 +409,59 @@ export const SERVICES = [
       { q: '¿Puedo probar mi idea en el personalizador antes de cotizar?', a: 'Sí, en /personalizador podés armar una vista previa de mates o placas antes de pedir presupuesto.' },
       { q: '¿Qué formato de logo necesitan para grabar?', a: 'Preferentemente vectorial (.ai, .pdf, .svg); si solo tenés el logo en imagen, consultanos si es viable.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/personalizado-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/PERSONALIZADOS/${i + 1}.png`,
       alt: `Trabajo personalizado en láser ${i + 1}`,
+    })),
+  },
+  {
+    slug: 'senaletica-carteleria',
+    icon: 'SignpostBig',
+    title: 'Señalética y cartelería láser',
+    shortTitle: 'Señalética y cartelería',
+    keyword: 'señalética láser',
+    metaDescription:
+      'Señalética y cartelería cortada y grabada con láser en Buenos Aires. Carteles institucionales, indicadores y letreros a medida para locales y empresas.',
+    heroTitle: 'Señalética y cartelería láser en Buenos Aires',
+    heroSubtitle:
+      'Carteles, letreros e indicadores cortados y grabados con láser para locales, oficinas y espacios institucionales.',
+    description: [
+      'Fabricamos señalética y cartelería para locales comerciales, oficinas, consultorios y espacios institucionales, con corte y grabado láser de precisión.',
+      'Trabajamos indicadores de ambientes, carteles con logo, numeración de puertas y letreros exteriores, en el material que mejor se adapte al uso interior o exterior.',
+      'Coordinamos diseño de layout y tipografía antes de producir, para asegurar consistencia visual en todo el cartel.',
+    ],
+    materials: [
+      { material: 'Acrílico color', cortar: true, marcar: false, grabar: true, espesor: '3-5mm', tamaño: 'a medida', stock: true },
+      { material: 'MDF con pintura', cortar: true, marcar: false, grabar: true, espesor: '9mm', tamaño: 'a medida', stock: true },
+      { material: 'Acero inoxidable', cortar: false, marcar: true, grabar: true, espesor: '1-3mm', tamaño: 'a medida', stock: false },
+      { material: 'Aluminio anodizado', cortar: false, marcar: true, grabar: true, espesor: '0.5-2mm', tamaño: 'a medida', stock: false },
+    ],
+    seoParagraph:
+      'Producimos señalética interior y exterior para locales, oficinas y espacios institucionales: indicadores, numeración y carteles con logo. El precio varía según material, tamaño y cantidad, consultanos con tu proyecto.',
+    secondaryKeywords: [
+      'cartelería láser',
+      'señalética para locales',
+      'carteles institucionales',
+      'letreros cortados con láser',
+      'indicadores de ambientes',
+    ],
+    highlights: [
+      'Interior y exterior según material',
+      'Diseño de layout antes de producir',
+      'Numeración e indicadores a medida',
+    ],
+    faqs: [
+      { q: '¿Hacen cartelería para exterior?', a: 'Sí, en acero inoxidable o aluminio anodizado, resistentes a la intemperie.' },
+      { q: '¿Puedo pedir varios carteles iguales con numeración distinta?', a: 'Sí, es un pedido frecuente: mismo diseño base con numeración o texto correlativo.' },
+      { q: '¿Cuál es el precio de la señalética láser?', a: 'Depende del material, tamaño y cantidad de piezas. Escribinos por WhatsApp con tu proyecto y te pasamos el precio sin cargo.' },
+    ],
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/Se%C3%B1al%C3%A9tica%20y%20Carteleria/${i + 1}.png`,
+      alt: `Señalética láser ${i + 1}`,
     })),
   },
 ];
 
 export const getServiceBySlug = (slug) => SERVICES.find((s) => s.slug === slug);
+
+export const pickRandomImage = (gallery) => gallery[Math.floor(Math.random() * gallery.length)];

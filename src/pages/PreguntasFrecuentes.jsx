@@ -59,7 +59,7 @@ export default function PreguntasFrecuentes() {
           href={buildWhatsappLink('Hola! Tengo una consulta que no encontré en las preguntas frecuentes.')}
           target="_blank"
           rel="noreferrer"
-          className="inline-block bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-8 py-3"
+          className="inline-block bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-8 py-3"
         >
           Preguntar por WhatsApp
         </a>

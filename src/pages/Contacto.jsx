@@ -85,7 +85,7 @@ export default function Contacto() {
               />
               <button
                 type="submit"
-                className="bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-6 py-3 text-sm"
+                className="bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
               >
                 Enviar consulta
               </button>

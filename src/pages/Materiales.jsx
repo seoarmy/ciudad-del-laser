@@ -47,7 +47,7 @@ export default function Materiales() {
             href={buildWhatsappLink('Hola! Quiero consultar por un material que no vi en la web.')}
             target="_blank"
             rel="noreferrer"
-            className="inline-block bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-6 py-2 text-sm"
+            className="inline-block bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-2 text-sm"
           >
             Consultar por WhatsApp
           </a>

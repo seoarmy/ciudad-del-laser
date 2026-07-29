@@ -16,7 +16,7 @@ function TransactionalBox({ serviceSlug, text }) {
       <p className="font-semibold text-carbon">{text}</p>
       <Link
         to={`/servicios/${service.slug}`}
-        className="shrink-0 bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-5 py-2 text-sm text-center transition-colors"
+        className="shrink-0 bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-5 py-2 text-sm text-center transition-colors"
       >
         Ver servicio
       </Link>
@@ -99,7 +99,7 @@ export default function BlogPost({ post }) {
             href={buildWhatsappLink(`Hola! Leí el artículo "${post.title}" y quiero cotizar un trabajo.`)}
             target="_blank"
             rel="noreferrer"
-            className="bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-6 py-3 text-sm whitespace-nowrap"
+            className="bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-3 text-sm whitespace-nowrap"
           >
             Cotizar por WhatsApp
           </a>
@@ -131,7 +131,7 @@ export default function BlogPost({ post }) {
             href={buildWhatsappLink('Hola! Quiero cotizar un trabajo de corte/grabado láser.')}
             target="_blank"
             rel="noreferrer"
-            className="block text-center bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-4 py-3 text-sm"
+            className="block text-center bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-4 py-3 text-sm"
           >
             Cotizar por WhatsApp
           </a>

@@ -129,7 +129,7 @@ export default function ComoArmarTuArchivo() {
 
           <a
             href={`mailto:${SITE.fileSubmissionEmail}`}
-            className="inline-block mt-6 bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-6 py-3 text-sm"
+            className="inline-block mt-6 bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
           >
             Enviar archivo a {SITE.fileSubmissionEmail}
           </a>
@@ -144,7 +144,7 @@ export default function ComoArmarTuArchivo() {
             href={buildWhatsappLink('Hola! Necesito ayuda para armar mi archivo para cotizar.')}
             target="_blank"
             rel="noreferrer"
-            className="inline-block bg-orange hover:bg-orange-dark text-carbon font-bold rounded-lg px-10 py-4"
+            className="inline-block bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-10 py-4"
           >
             Pedir ayuda por WhatsApp
           </a>

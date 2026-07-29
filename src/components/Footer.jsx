@@ -55,7 +55,7 @@ export default function Footer() {
             href={buildWhatsappLink('Hola! Quiero hacer una consulta.')}
             target="_blank"
             rel="noreferrer"
-            className="bg-accent-gradient text-white font-bold rounded-lg px-5 py-2.5 text-sm"
+            className="bg-accent-gradient text-white font-semibold rounded-lg px-5 py-2.5 text-sm"
           >
             Escribinos por WhatsApp
           </MagneticButton>

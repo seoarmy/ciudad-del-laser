@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-carbon: #0B0B0D;
-  --color-surface: #18181B;
-  --color-orange: #FF5C33;
-  --color-orange-dark: #E64726;
+  --color-carbon: #0D0D0D;
+  --color-surface: #333333;
+  --color-orange: #F27C1A;
+  --color-orange-dark: #FFA23A;
   --color-pink: #FF2D78;
   --color-gray-light: #FAFAFA;
   --color-gray-lighter: #ECECEC;
-  --color-gray-text: #A1A1AA;
+  --color-gray-text: #A6A6A6;
   --color-green-check: #3C9D5B;
 
   --font-heading: "Space Grotesk", "Archivo Black", sans-serif;
-  --font-body: "Geist", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 }
 
 body {
   font-family: var(--font-body);
+  font-weight: 400;
   color: var(--color-carbon);
   background: var(--color-gray-light);
 }
@@ -26,6 +27,18 @@ body {
 h1, h2, h3, .font-heading {
   font-family: var(--font-heading);
   letter-spacing: -0.01em;
+}
+
+h1 { font-weight: 700; }
+h2, h3 { font-weight: 600; }
+
+button, .btn, a.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.font-destacado {
+  font-weight: 500;
 }
 
 .font-mono {
