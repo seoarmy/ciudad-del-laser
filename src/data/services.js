@@ -44,7 +44,7 @@ export const SERVICES = [
       { q: '¿Cuál es el precio del corte láser de MDF?', a: 'El precio depende del espesor, la superficie de corte y la cantidad de piezas. Escribinos por WhatsApp con tu diseño y te pasamos el precio sin cargo.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/MDF/${i + 1}.png`,
+      img: `/images/MDF/${i + 1}.webp`,
       alt: `Pieza de MDF cortada con láser ${i + 1}`,
     })),
   },
@@ -91,7 +91,7 @@ export const SERVICES = [
       { q: '¿Cuál es el precio del grabado láser en metal?', a: 'Depende del material, la cantidad de piezas y el detalle del grabado. Enviános tu consulta por WhatsApp y te pasamos el precio sin cargo.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/METALES/${i + 1}.png`,
+      img: `/images/METALES/${i + 1}.webp`,
       alt: `Grabado láser en metal ${i + 1}`,
     })),
   },
@@ -138,7 +138,7 @@ export const SERVICES = [
       { q: '¿Cuál es el precio del corte y grabado láser en madera?', a: 'Varía según el tipo de madera, el espesor y la cantidad de piezas. Consultanos por WhatsApp con tu proyecto y te damos el precio sin cargo.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/MADERA/${i + 1}.png`,
+      img: `/images/MADERA/${i + 1}.webp`,
       alt: `Corte y grabado láser en madera ${i + 1}`,
     })),
   },
@@ -185,7 +185,7 @@ export const SERVICES = [
       { q: '¿Qué espesor conviene para letras corpóreas de pared?', a: 'Depende del tamaño de la letra: para letras chicas 3mm alcanza, para letras grandes recomendamos 5mm o más.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/ACRILICO/${i + 1}.png`,
+      img: `/images/ACRILICO/${i + 1}.webp`,
       alt: `Corte láser de acrílico ${i + 1}`,
     })),
   },
@@ -276,7 +276,7 @@ export const SERVICES = [
       { q: '¿Cuál es el precio del grabado en mármol?', a: 'Depende del tamaño de la placa y el detalle del grabado. Escribinos por WhatsApp y te pasamos el precio sin cargo.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/MARMOL/${i + 1}.png`,
+      img: `/images/MARMOL/${i + 1}.webp`,
       alt: `Grabado en mármol ${i + 1}`,
     })),
   },
@@ -320,7 +320,7 @@ export const SERVICES = [
       { q: '¿Hacen envío al cementerio o solo retiro?', a: 'Coordinamos envío según zona; consultanos por WhatsApp la logística para tu caso.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/PLACAS%20DE%20NICHO%20-%20CEMENTERIO/${i + 1}.png`,
+      img: `/images/PLACAS%20DE%20NICHO%20-%20CEMENTERIO/${i + 1}.webp`,
       alt: `Placa para nicho grabada con láser ${i + 1}`,
     })),
   },
@@ -365,7 +365,7 @@ export const SERVICES = [
       { q: '¿Puedo pedir piezas transparentes para ventanas?', a: 'Sí, usamos acrílico cristal cortado a la medida exacta de cada abertura.' },
     ],
     gallery: Array.from({ length: 1 }).map((_, i) => ({
-      img: `/images/MAQUETAS/${i + 1}.png`,
+      img: `/images/MAQUETAS/${i + 1}.webp`,
       alt: `Corte láser para maqueta ${i + 1}`,
     })),
   },
@@ -410,7 +410,7 @@ export const SERVICES = [
       { q: '¿Qué formato de logo necesitan para grabar?', a: 'Preferentemente vectorial (.ai, .pdf, .svg); si solo tenés el logo en imagen, consultanos si es viable.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/PERSONALIZADOS/${i + 1}.png`,
+      img: `/images/PERSONALIZADOS/${i + 1}.webp`,
       alt: `Trabajo personalizado en láser ${i + 1}`,
     })),
   },
@@ -456,7 +456,7 @@ export const SERVICES = [
       { q: '¿Cuál es el precio de la señalética láser?', a: 'Depende del material, tamaño y cantidad de piezas. Escribinos por WhatsApp con tu proyecto y te pasamos el precio sin cargo.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
-      img: `/images/Se%C3%B1al%C3%A9tica%20y%20Carteleria/${i + 1}.png`,
+      img: `/images/Se%C3%B1al%C3%A9tica%20y%20Carteleria/${i + 1}.webp`,
       alt: `Señalética láser ${i + 1}`,
     })),
   },

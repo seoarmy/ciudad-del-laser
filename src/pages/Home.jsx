@@ -133,7 +133,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white border border-gray-lighter rounded-xl p-8 text-center hover:border-orange transition-colors">
             <img
-              src="/images/METALES/5.png"
+              src="/images/METALES/5.webp"
               alt="Personalizador de mates"
               className="rounded-lg mb-6 w-full h-48 object-cover"
             />
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
           <div className="bg-white border border-gray-lighter rounded-xl p-8 text-center hover:border-orange transition-colors">
             <img
-              src="/images/PLACAS%20DE%20NICHO%20-%20CEMENTERIO/7.png"
+              src="/images/PLACAS%20DE%20NICHO%20-%20CEMENTERIO/7.webp"
               alt="Personalizador de placas"
               className="rounded-lg mb-6 w-full h-48 object-cover"
             />
