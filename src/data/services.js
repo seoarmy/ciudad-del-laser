@@ -230,8 +230,8 @@ export const SERVICES = [
       { q: '¿Qué material recomiendan para exteriores?', a: 'Acero inoxidable o bronce, por su resistencia a la intemperie y durabilidad.' },
       { q: '¿Cuánto tardan en producir una placa conmemorativa?', a: 'Depende de la cantidad y el material, pero suele coordinarse con margen para actos con fecha fija.' },
     ],
-    gallery: Array.from({ length: 6 }).map((_, i) => ({
-      img: `https://picsum.photos/seed/conmemorativa-${i}/600/450`,
+    gallery: Array.from({ length: 10 }).map((_, i) => ({
+      img: `/images/PLACAS%20CONMEMORATIVAS/${i + 1}.webp`,
       alt: `Placa conmemorativa grabada con láser ${i + 1}`,
     })),
   },
