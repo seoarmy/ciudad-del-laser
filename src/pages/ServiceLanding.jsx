@@ -1,5 +1,6 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { useMemo } from 'react';
+import { Mail, ArrowRight } from 'lucide-react';
 import { getServiceBySlug, pickRandomImage } from '../data/services';
 import { buildWhatsappLink, SITE_URL, SITE } from '../data/site';
 import { FILE_PROGRAMS, LINE_COLORS } from '../data/fileGuide';
@@ -110,41 +111,63 @@ export default function ServiceLanding() {
       </section>
 
       <section className="max-w-4xl mx-auto px-4 md:px-8 py-14 md:py-20">
-        <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-8">Cómo enviarnos tu diseño</h2>
-        <div className="bg-gray-light rounded-xl p-6 md:p-8">
+        <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-2">Cómo enviarnos tu diseño</h2>
+        <p className="text-gray-text text-center mb-10">3 pasos y listo para cotizar.</p>
+
+        <div className="flex flex-col gap-8">
           {applicableColors.length > 0 && (
-            <>
-              <p className="font-semibold text-carbon mb-3">
-                Marcá con estos colores de línea qué tiene que hacer el láser en cada trazo:
-              </p>
-              <ul className="mb-6 space-y-2">
-                {applicableColors.map((c) => (
-                  <li key={c.key} className="flex items-center gap-2 text-sm">
-                    <span className={`w-4 h-4 rounded-full ${c.dot} inline-block`} /> {c.label}
-                  </li>
+            <div className="flex gap-4 items-start">
+              <span className="font-heading text-orange text-3xl leading-none shrink-0 select-none w-8 text-center">1</span>
+              <div>
+                <p className="font-semibold text-carbon mb-3">
+                  Marcá con estos colores de línea qué tiene que hacer el láser en cada trazo
+                </p>
+                <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                  {applicableColors.map((c) => (
+                    <li key={c.key} className="flex items-center gap-2 text-sm text-gray-text">
+                      <span className={`w-4 h-4 rounded-full ${c.dot} inline-block`} /> {c.label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          <div className="flex gap-4 items-start">
+            <span className="font-heading text-orange text-3xl leading-none shrink-0 select-none w-8 text-center">
+              {applicableColors.length > 0 ? '2' : '1'}
+            </span>
+            <div>
+              <p className="font-semibold text-carbon mb-3">Guardá tu archivo en alguno de estos formatos</p>
+              <ul className="flex flex-wrap gap-2">
+                {FILE_PROGRAMS.map((p) => (
+                  <li key={p} className="bg-gray-light rounded-lg px-3 py-2 text-sm text-carbon">{p}</li>
                 ))}
               </ul>
-            </>
-          )}
-          <p className="font-semibold text-carbon mb-3">Aceptamos los siguientes formatos:</p>
-          <ul className="grid grid-cols-2 gap-2 mb-6">
-            {FILE_PROGRAMS.map((p) => (
-              <li key={p} className="bg-white rounded-lg px-3 py-2 text-sm">{p}</li>
-            ))}
-          </ul>
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href={`mailto:${SITE.fileSubmissionEmail}?subject=Diseño ${service.title}`}
-              className="inline-block bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
-            >
-              Enviar diseño a {SITE.fileSubmissionEmail}
-            </a>
-            <Link
-              to="/como-armar-tu-archivo"
-              className="inline-block text-sm text-orange-dark hover:underline font-semibold"
-            >
-              Ver guía completa paso a paso
-            </Link>
+            </div>
+          </div>
+
+          <div className="flex gap-4 items-start">
+            <span className="font-heading text-orange text-3xl leading-none shrink-0 select-none w-8 text-center">
+              {applicableColors.length > 0 ? '3' : '2'}
+            </span>
+            <div>
+              <p className="font-semibold text-carbon mb-4">Enviánoslo y te cotizamos</p>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={`mailto:${SITE.fileSubmissionEmail}?subject=Diseño ${service.title}`}
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-3 text-sm transition-colors"
+                >
+                  <Mail size={16} /> Enviar diseño a {SITE.fileSubmissionEmail}
+                </a>
+                <Link
+                  to="/como-armar-tu-archivo"
+                  className="inline-flex items-center gap-1.5 border border-gray-lighter hover:border-orange text-carbon font-semibold rounded-lg px-6 py-3 text-sm transition-colors"
+                >
+                  Ver guía completa <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
