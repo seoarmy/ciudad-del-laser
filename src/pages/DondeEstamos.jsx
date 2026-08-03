@@ -1,6 +1,6 @@
-import { MapPin, Truck } from 'lucide-react';
+import { MapPin, Truck, Clock, ExternalLink } from 'lucide-react';
 import Seo from '../components/Seo';
-import { SITE, SERVICE_ZONES, buildWhatsappLink } from '../data/site';
+import { SITE, SUCURSALES, SERVICE_ZONES, buildWhatsappLink } from '../data/site';
 
 export default function DondeEstamos() {
   return (
@@ -27,8 +27,44 @@ export default function DondeEstamos() {
           se realiza por WhatsApp o mail, para agilizar los tiempos y trabajar con clientes de toda la zona.
         </p>
         <p className="text-gray-text leading-relaxed">
-          Nuestro taller está en {SITE.address}.
+          Trabajamos con {SUCURSALES.length} sucursales: {SUCURSALES.map((s) => s.name).join(' y ')}.
         </p>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-4 md:px-8 pb-14 md:pb-20">
+        <h2 className="font-heading text-2xl uppercase text-center mb-8">Nuestras sucursales</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {SUCURSALES.map((suc) => (
+            <div key={suc.name} className="flex flex-col gap-3">
+              <h3 className="font-heading text-lg uppercase">{suc.name}</h3>
+              <div className="flex items-start gap-3">
+                <MapPin className="text-orange shrink-0 mt-0.5" size={18} />
+                <span className="text-sm text-carbon">{suc.address}</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Clock className="text-orange shrink-0 mt-0.5" size={18} />
+                <span className="text-sm text-carbon">{suc.hours}</span>
+              </div>
+              <div className="rounded-xl overflow-hidden border border-gray-lighter h-56">
+                <iframe
+                  title={`Ubicación ${suc.name}`}
+                  src={suc.mapsEmbedUrl}
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <a
+                href={suc.mapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-orange-dark hover:underline"
+              >
+                Abrir en Maps <ExternalLink size={14} />
+              </a>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="bg-gray-light py-14 md:py-20">
@@ -41,16 +77,6 @@ export default function DondeEstamos() {
                 <span className="text-sm text-carbon">{zone}</span>
               </div>
             ))}
-          </div>
-
-          <div className="rounded-xl overflow-hidden border border-gray-lighter h-72 mt-6">
-            <iframe
-              title="Ubicación de Ciudad del Láser"
-              src={SITE.mapsEmbedUrl}
-              className="w-full h-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
           </div>
         </div>
       </section>

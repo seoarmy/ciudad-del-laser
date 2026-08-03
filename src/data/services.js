@@ -6,21 +6,19 @@ export const SERVICES = [
     shortTitle: 'Corte láser MDF',
     keyword: 'corte láser mdf',
     metaDescription:
-      'Corte láser de MDF en Buenos Aires. Precisión milimétrica, espesores de 3 a 18mm, entrega rápida. Cotizá tu placa de MDF cortada a medida.',
+      'Corte láser de MDF en Buenos Aires. Precisión milimétrica, espesores de 3 a 9mm, entrega rápida. Cotizá tu placa de MDF cortada a medida.',
     heroTitle: 'Corte láser de MDF en Buenos Aires',
     heroSubtitle:
       'Piezas técnicas, decorativas y de diseño cortadas con precisión milimétrica sobre MDF, en el espesor que necesites.',
     description: [
       'El MDF es uno de los materiales más pedidos para corte láser por su versatilidad: sirve tanto para piezas técnicas y prototipos como para objetos decorativos, cajas, letras corpóreas y muebles a medida.',
-      'Trabajamos espesores desde 3mm hasta 18mm, con cortes limpios y sin quemado excesivo del borde gracias a la calibración de potencia y velocidad según cada espesor.',
+      'Trabajamos espesores desde 3mm hasta 9mm, con cortes limpios y sin quemado excesivo del borde gracias a la calibración de potencia y velocidad según cada espesor.',
       'Enviás tu archivo vectorial (o te ayudamos a armarlo) y te cotizamos según superficie de corte y cantidad de piezas.',
     ],
     materials: [
       { material: 'MDF 3mm', cortar: true, marcar: true, grabar: true, espesor: '3mm', tamaño: 'hasta 900x600mm', stock: true },
       { material: 'MDF 5.5mm', cortar: true, marcar: true, grabar: true, espesor: '5.5mm', tamaño: 'hasta 900x600mm', stock: true },
       { material: 'MDF 9mm', cortar: true, marcar: true, grabar: true, espesor: '9mm', tamaño: 'hasta 900x600mm', stock: true },
-      { material: 'MDF 12mm', cortar: true, marcar: false, grabar: true, espesor: '12mm', tamaño: 'hasta 900x600mm', stock: false },
-      { material: 'MDF 18mm', cortar: true, marcar: false, grabar: true, espesor: '18mm', tamaño: 'hasta 900x600mm', stock: false },
     ],
     seoParagraph:
       'Ya sea una sola pieza o una tirada grande para producción, cotizamos el corte de MDF según espesor y superficie de la placa. También podés sumar grabado en la misma pieza, sin costo adicional de setup.',
@@ -32,7 +30,7 @@ export const SERVICES = [
       'corte y grabado láser mdf',
     ],
     highlights: [
-      'Espesores de 3mm a 18mm disponibles',
+      'Espesores de 3mm a 9mm disponibles',
       'Corte y grabado en la misma pieza, sin costo extra',
       'Cotización sin cargo por WhatsApp en el día',
     ],
@@ -196,23 +194,56 @@ export const SERVICES = [
     shortTitle: 'Placas conmemorativas',
     keyword: 'placas conmemorativas',
     metaDescription:
-      'Placas conmemorativas y placas homenaje grabadas con láser en Buenos Aires. Para instituciones, empresas y homenajes personales.',
+      'Placas conmemorativas grabadas con láser en Buenos Aires, con terminación que simula acero o bronce. Para instituciones, empresas y homenajes personales.',
     heroTitle: 'Placas conmemorativas en Buenos Aires',
     heroSubtitle:
-      'Placas homenaje grabadas con láser para instituciones, empresas y aniversarios, con texto, logo y fecha grabados de forma permanente.',
+      'Placas homenaje con terminación que simula acero o bronce, grabadas con láser para instituciones, empresas y aniversarios, con texto, logo y fecha de forma permanente.',
     description: [
-      'Fabricamos placas conmemorativas para inauguraciones, aniversarios institucionales, reconocimientos y homenajes, con grabado láser permanente sobre metal o acrílico.',
-      'El texto, logo institucional y fecha se graban con precisión, logrando una terminación prolija apta para actos formales y colocación permanente.',
+      'Hacemos placas conmemorativas con terminación que simula el acero y el bronce: fondo color bronce o color acero, con el texto en negro. Son aptas para exterior y mantienen el contraste con el paso del tiempo.',
+      'Podemos colocar una madera enchapada negra de fondo, para darle más cuerpo a la placa.',
       'Coordinamos el diseño del layout de texto y logo antes de producir, para que apruebes el arte final antes del grabado.',
+      'Podemos hacer factura A o C, cada una con sus respectivos costos impositivos.',
     ],
     materials: [
-      { material: 'Acero inoxidable', cortar: false, marcar: true, grabar: true, espesor: '1-3mm', tamaño: 'a medida', stock: false },
-      { material: 'Bronce', cortar: false, marcar: true, grabar: true, espesor: '2-4mm', tamaño: 'a medida', stock: false },
+      { material: 'Fondo color bronce', cortar: false, marcar: false, grabar: true, espesor: 'a medida', tamaño: 'personalizada', stock: false },
+      { material: 'Fondo color acero', cortar: false, marcar: false, grabar: true, espesor: 'a medida', tamaño: 'personalizada', stock: false },
       { material: 'Acrílico color', cortar: true, marcar: false, grabar: true, espesor: '3-5mm', tamaño: 'a medida', stock: true },
       { material: 'MDF con pintura', cortar: true, marcar: false, grabar: true, espesor: '9mm', tamaño: 'a medida', stock: true },
     ],
+    sizePriceTable: {
+      note: 'Podemos hacer medidas personalizadas, pero las más solicitadas son estas:',
+      rows: [
+        { size: '10x10', price: 20000 },
+        { size: '20x20', price: 30000 },
+        { size: '30x20', price: 40000 },
+        { size: '30x30', price: 48000 },
+        { size: '40x30', price: 55000 },
+        { size: '40x40', price: 70000 },
+        { size: '50x40', price: 80000 },
+        { size: '50x50', price: 90000 },
+        { size: '60x50', price: 120000 },
+        { size: '60x60', price: 140000 },
+        { size: '70x60', price: 160000 },
+      ],
+    },
+    productionNote:
+      'El tiempo de demora es de 72hs hábiles máximo, una vez que se acredita el pago de la seña. La cual debe ser del 50% del trabajo.',
+    accessories: [
+      {
+        title: 'Pies de apoyo',
+        text: 'Soporte resistente y discreto para una presentación elegante, ideal para exhibir la placa sobre un escritorio o mostrador.',
+      },
+      {
+        title: 'Embellecedores',
+        text: 'Acabado premium que realza cada detalle. Disponibles en dos terminaciones: bronce o acero, a juego con la placa.',
+      },
+      {
+        title: 'Cajas para placas personalizables',
+        text: 'Protección, presentación y valor agregado. Personalización mediante grabado láser, disponibles únicamente para placas de 20x20cm y 30x30cm.',
+      },
+    ],
     seoParagraph:
-      'Producimos placas para inauguraciones, aniversarios y actos institucionales, además de reconocimientos personalizados para premiar logros de empleados, socios o instituciones. Cada placa se graba con texto y logo a medida.',
+      'Producimos placas para inauguraciones, aniversarios y actos institucionales, además de reconocimientos personalizados para premiar logros de empleados, socios o instituciones. Cada placa se graba con texto y logo a medida, con terminación que simula acero o bronce.',
     secondaryKeywords: [
       'placa conmemorativa personalizada',
       'placas conmemorativas grabadas',
@@ -222,13 +253,15 @@ export const SERVICES = [
     ],
     highlights: [
       'Texto, logo y fecha grabados con precisión',
-      'Acero inoxidable, bronce o acrílico',
+      'Terminación que simula acero o bronce, apta para exterior',
       'Aprobás el diseño final antes de producir',
     ],
     faqs: [
       { q: '¿Puedo enviar mi propio diseño de placa?', a: 'Sí, podés enviar el arte o el texto/logo y armamos el layout final para tu aprobación.' },
-      { q: '¿Qué material recomiendan para exteriores?', a: 'Acero inoxidable o bronce, por su resistencia a la intemperie y durabilidad.' },
-      { q: '¿Cuánto tardan en producir una placa conmemorativa?', a: 'Depende de la cantidad y el material, pero suele coordinarse con margen para actos con fecha fija.' },
+      { q: '¿Las placas son de acero o bronce real?', a: 'No, son placas con terminación que simula el acero o el bronce (fondo color bronce o acero con texto en negro), aptas para exterior.' },
+      { q: '¿Qué accesorios puedo sumar a mi placa?', a: 'Pies de apoyo, embellecedores en bronce o acero, y cajas personalizables (disponibles para placas de 20x20cm y 30x30cm).' },
+      { q: '¿Cuánto tardan en producir una placa conmemorativa?', a: 'El tiempo de demora es de 72hs hábiles máximo, una vez acreditado el pago de la seña (50% del trabajo).' },
+      { q: '¿Puedo pedir factura?', a: 'Sí, podemos hacer factura A o C, cada una con sus respectivos costos impositivos.' },
     ],
     gallery: Array.from({ length: 10 }).map((_, i) => ({
       img: `/images/PLACAS%20CONMEMORATIVAS/${i + 1}.webp`,

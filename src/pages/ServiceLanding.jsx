@@ -106,6 +106,52 @@ export default function ServiceLanding() {
         </div>
       </section>
 
+      {service.sizePriceTable && (
+        <section className="max-w-4xl mx-auto px-4 md:px-8 py-14 md:py-20">
+          <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-4">Medidas y precios</h2>
+          {service.sizePriceTable.note && (
+            <p className="text-gray-text text-center mb-8">{service.sizePriceTable.note}</p>
+          )}
+          <div className="overflow-x-auto rounded-lg border border-gray-lighter">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-carbon text-white">
+                  <th className="text-left px-4 py-2 font-semibold">Medida (cm)</th>
+                  <th className="text-left px-4 py-2 font-semibold">Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                {service.sizePriceTable.rows.map((row, i) => (
+                  <tr key={row.size} className={i % 2 ? 'bg-gray-light' : 'bg-white'}>
+                    <td className="px-4 py-2 font-medium">{row.size}</td>
+                    <td className="px-4 py-2 text-gray-text">${row.price.toLocaleString('es-AR')}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {service.productionNote && (
+            <p className="mt-6 text-sm text-gray-text text-center">✅ {service.productionNote}</p>
+          )}
+        </section>
+      )}
+
+      {service.accessories && (
+        <section className="bg-gray-light py-14 md:py-20">
+          <div className="max-w-5xl mx-auto px-4 md:px-8">
+            <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-8">Accesorios disponibles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {service.accessories.map((acc) => (
+                <div key={acc.title} className="bg-white border border-gray-lighter rounded-xl p-6">
+                  <p className="font-heading uppercase mb-2">{acc.title}</p>
+                  <p className="text-sm text-gray-text">{acc.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <SeoKeywordSection
         title={`Todo sobre ${service.shortTitle.toLowerCase()}`}
         paragraph={service.seoParagraph}

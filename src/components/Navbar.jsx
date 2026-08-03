@@ -9,7 +9,6 @@ const navItem = 'text-sm font-semibold text-white/80 hover:text-white transition
 
 const RESOURCE_LINKS = [
   { label: 'Galería', to: '/galeria' },
-  { label: 'Cómo cotizar', to: '/como-armar-tu-archivo' },
   { label: 'Preguntas frecuentes', to: '/preguntas-frecuentes' },
   { label: 'Dónde estamos', to: '/donde-estamos' },
   { label: 'Envíos y pagos', to: '/envios-y-pagos' },
@@ -59,6 +58,7 @@ export default function Navbar() {
           <Dropdown label="Servicios" items={serviceLinks} open={servicesOpen} setOpen={setServicesOpen} />
           <NavLink to="/materiales" className={navItem}>Materiales</NavLink>
           <NavLink to="/personalizador" className={navItem}>Personalizador</NavLink>
+          <NavLink to="/como-armar-tu-archivo" className={`${navItem} text-orange`}>Instructivo</NavLink>
           <Dropdown label="Recursos" items={RESOURCE_LINKS} open={resourcesOpen} setOpen={setResourcesOpen} />
           <NavLink to="/contacto" className={navItem}>Contacto</NavLink>
         </nav>
@@ -93,6 +93,7 @@ export default function Navbar() {
 
           <Link to="/materiales" onClick={() => setOpen(false)} className={`${navItem} mt-2`}>Materiales</Link>
           <Link to="/personalizador" onClick={() => setOpen(false)} className={navItem}>Personalizador</Link>
+          <Link to="/como-armar-tu-archivo" onClick={() => setOpen(false)} className={`${navItem} text-orange`}>Instructivo</Link>
 
           <p className="text-xs font-bold uppercase text-gray-text mt-2">Recursos</p>
           {RESOURCE_LINKS.map((item) => (

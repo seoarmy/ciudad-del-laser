@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Grid3x3, Maximize, Minimize, ZoomIn, ZoomOut, Download, FileJson } from 'lucide-react';
 
 export default function PreviewToolbar({
@@ -10,24 +10,25 @@ export default function PreviewToolbar({
 }) {
   const [zoom, setZoom] = useState(1);
   const [fullscreen, setFullscreen] = useState(false);
-  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!fullscreen) return undefined;
+    function handleKeyDown(e) {
+      if (e.key === 'Escape') setFullscreen(false);
+    }
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [fullscreen]);
 
   function toggleFullscreen() {
-    if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen?.();
-      setFullscreen(true);
-    } else {
-      document.exitFullscreen?.();
-      setFullscreen(false);
-    }
+    setFullscreen((f) => !f);
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className={fullscreen ? 'fixed inset-0 z-50 bg-gray-light flex flex-col gap-3 p-6' : 'flex flex-col gap-3'}>
       <div
-        ref={containerRef}
         className={`bg-gray-light rounded-xl p-10 flex items-center justify-center overflow-hidden ${
-          fullscreen ? 'fixed inset-0 z-50 bg-gray-light p-16' : ''
+          fullscreen ? 'flex-1' : ''
         }`}
       >
         <div style={{ transform: `scale(${zoom})`, transition: 'transform 0.15s ease' }}>

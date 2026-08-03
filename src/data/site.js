@@ -13,8 +13,7 @@ export const SITE = {
   instagram: '@ciudad.del.laser',
   instagramUrl: 'https://instagram.com/ciudad.del.laser',
   email: 'contacto@ciudaddellaser.com.ar',
-  // el PDF de instructivo pide enviar los archivos de corte a esta casilla puntual
-  fileSubmissionEmail: 'ciudaddellaser@gmail.com',
+  fileSubmissionEmail: 'contacto@ciudaddellaser.com.ar',
   city: 'Buenos Aires, Argentina',
   yearsOfTrayectory: 10,
   address: 'C. Dr. Juan Felipe Aranguren 1870, C1406 Cdad. Autónoma de Buenos Aires, Argentina',
@@ -23,6 +22,33 @@ export const SITE = {
     encodeURIComponent('C. Dr. Juan Felipe Aranguren 1870, C1406 CABA, Argentina') +
     '&output=embed',
 };
+
+export const SUCURSALES = [
+  {
+    name: 'Flores - CABA',
+    address: 'Dr. Juan Felipe Aranguren 1870, Flores, CABA',
+    hours: 'Lun - Vie: Con cita previa',
+    mapsEmbedUrl:
+      'https://www.google.com/maps?q=' +
+      encodeURIComponent('C. Dr. Juan Felipe Aranguren 1870, C1406 CABA, Argentina') +
+      '&output=embed',
+    mapsLink:
+      'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent('C. Dr. Juan Felipe Aranguren 1870, C1406 CABA, Argentina'),
+  },
+  {
+    name: 'Ciudadela - GBA',
+    address: 'Félix Ballester 333, Ciudadela, GBA',
+    hours: 'Lun - Vie: Con cita previa',
+    mapsEmbedUrl:
+      'https://www.google.com/maps?q=' +
+      encodeURIComponent('Félix Ballester 333, Ciudadela, Buenos Aires, Argentina') +
+      '&output=embed',
+    mapsLink:
+      'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent('Félix Ballester 333, Ciudadela, Buenos Aires, Argentina'),
+  },
+];
 
 // TODO: confirmar zonas reales de cobertura con el cliente
 export const SERVICE_ZONES = [

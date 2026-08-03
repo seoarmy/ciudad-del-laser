@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Mail, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin, Clock, ExternalLink } from 'lucide-react';
 import { SERVICES } from '../data/services';
-import { SITE, buildWhatsappLink } from '../data/site';
+import { SITE, SUCURSALES, buildWhatsappLink } from '../data/site';
 import Seo from '../components/Seo';
 
 export default function Contacto() {
@@ -94,34 +94,41 @@ export default function Contacto() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="rounded-xl overflow-hidden border border-gray-lighter h-56">
-            <iframe
-              title="Ubicación de Ciudad del Láser"
-              src={SITE.mapsEmbedUrl}
-              className="w-full h-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-          <div className="bg-gray-light rounded-xl p-6 flex items-start gap-4">
-            <MapPin className="text-orange shrink-0" size={22} />
-            <div>
-              <p className="font-semibold">Dirección</p>
-              <p className="text-sm text-gray-text">{SITE.address}</p>
+          {SUCURSALES.map((suc) => (
+            <div key={suc.name} className="bg-gray-light rounded-xl p-6">
+              <p className="font-semibold mb-3">{suc.name}</p>
+              <div className="rounded-xl overflow-hidden border border-gray-lighter h-48 mb-4">
+                <iframe
+                  title={`Ubicación ${suc.name}`}
+                  src={suc.mapsEmbedUrl}
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="flex items-start gap-3 mb-2">
+                <MapPin className="text-orange shrink-0 mt-0.5" size={18} />
+                <span className="text-sm text-gray-text">{suc.address}</span>
+              </div>
+              <div className="flex items-start gap-3 mb-2">
+                <Clock className="text-orange shrink-0 mt-0.5" size={18} />
+                <span className="text-sm text-gray-text">{suc.hours}</span>
+              </div>
+              <a
+                href={suc.mapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-orange-dark hover:underline"
+              >
+                Abrir en Maps <ExternalLink size={14} />
+              </a>
             </div>
-          </div>
+          ))}
           <div className="bg-gray-light rounded-xl p-6 flex items-start gap-4">
             <Mail className="text-orange shrink-0" size={22} />
             <div>
               <p className="font-semibold">Mail</p>
               <a href={`mailto:${SITE.email}`} className="text-sm text-orange-dark hover:underline">{SITE.email}</a>
-            </div>
-          </div>
-          <div className="bg-gray-light rounded-xl p-6 flex items-start gap-4">
-            <Clock className="text-orange shrink-0" size={22} />
-            <div>
-              <p className="font-semibold">Horario de atención</p>
-              <p className="text-sm text-gray-text">Lunes a viernes, 9 a 18hs (respuesta por WhatsApp/mail).</p>
             </div>
           </div>
           <a

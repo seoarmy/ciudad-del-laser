@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Mail } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { SERVICES } from '../data/services';
-import { SITE, buildWhatsappLink } from '../data/site';
+import { SITE, SUCURSALES, buildWhatsappLink } from '../data/site';
 import MagneticButton from './MagneticButton';
 
 function InstagramIcon(props) {
@@ -36,7 +36,7 @@ export default function Footer() {
         <div>
           <p className="font-mono text-xs uppercase tracking-wide mb-3 text-orange">Servicios</p>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
-            {SERVICES.slice(0, 6).map((s) => (
+            {SERVICES.map((s) => (
               <li key={s.slug}>
                 <Link to={`/servicios/${s.slug}`} className="text-sm text-gray-text hover:text-white">
                   {s.shortTitle}
@@ -48,9 +48,21 @@ export default function Footer() {
 
         <div>
           <p className="font-mono text-xs uppercase tracking-wide mb-3 text-orange">Contacto</p>
-          <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 text-sm text-gray-text hover:text-white mb-4">
+          <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 text-sm text-gray-text hover:text-white mb-3">
             <Mail size={16} /> {SITE.email}
           </a>
+          {SUCURSALES.map((suc) => (
+            <a
+              key={suc.name}
+              href={suc.mapsLink}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-start gap-2 text-sm text-gray-text hover:text-white mb-2"
+            >
+              <MapPin size={16} className="shrink-0 mt-0.5" />
+              <span>{suc.name} — {suc.address}</span>
+            </a>
+          ))}
           <MagneticButton
             href={buildWhatsappLink('Hola! Quiero hacer una consulta.')}
             target="_blank"
