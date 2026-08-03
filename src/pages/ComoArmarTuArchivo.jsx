@@ -1,9 +1,9 @@
-import { AlertTriangle } from 'lucide-react';
 import Seo from '../components/Seo';
 import StepBlock from '../components/StepBlock';
 import MaterialTable from '../components/MaterialTable';
 import { MATERIAL_FAMILIES, MIN_DISTANCE_TABLE } from '../data/materials';
 import { buildWhatsappLink, SITE } from '../data/site';
+import { FILE_PROGRAMS, LINE_COLORS } from '../data/fileGuide';
 
 const ALL_MATERIALS = MATERIAL_FAMILIES.flatMap((f) => f.items);
 
@@ -35,68 +35,21 @@ const TIPS = [
   },
 ];
 
-const PROGRAMS = ['Rhinoceros (.3dm)', 'AutoCAD (.dwg / .dxf)', 'CorelDraw (.cdr)', 'Illustrator (.ai / .pdf)'];
-
-const MATE_STEPS = [
-  {
-    title: 'Dibujá la ubicación del grabado',
-    text: 'En una hoja dibujá un círculo representando la virola del mate vista desde arriba y marcá dónde querés ubicar cada diseño.',
-  },
-  {
-    title: 'Enviá una foto y los archivos',
-    text: 'Sacale una foto al dibujo y enviala junto con los logos, escudos o diseños (JPG, PDF, PNG) por mail o WhatsApp.',
-  },
-  {
-    title: 'Elegí la tipografía',
-    text: 'Para los textos podés elegir cualquier fuente disponible en Word o enviarnos el link para descargarla gratis.',
-  },
-  {
-    title: 'Recibí y confirmá el boceto',
-    text: 'Con la información recibida realizamos un boceto digital para mostrarte cómo quedará el grabado.',
-  },
-  {
-    title: 'Grabado final',
-    text: 'Una vez que recibimos tu confirmación, comenzamos con el grabado definitivo.',
-  },
-];
-
-const MATE_WARNINGS = [
-  {
-    title: 'Dejá la referencia',
-    text: 'Cuando entregues el mate, colocá dentro del mismo el papel utilizado para el dibujo de referencia.',
-  },
-  {
-    title: 'Identificá el mate',
-    text: 'La bolsa o el mate deben tener el nombre del dueño o emprendimiento. Esto evita confusiones con otros trabajos.',
-  },
-];
-
 export default function ComoArmarTuArchivo() {
   return (
     <>
       <Seo
-        title="Cómo enviar tu diseño para cotizar corte, grabado láser y mates"
-        description="Guía paso a paso para armar tu archivo de corte láser (materialidad, tamaño real, colores de línea, formatos aceptados) y cómo enviar tu diseño para grabado en mate."
+        title="Cómo armar tu archivo para cotizar corte láser"
+        description="Guía paso a paso para armar tu archivo de corte láser: materialidad, tamaño real, colores de línea (corte/marcado/grabado) y formatos aceptados (.dwg, .ai, .cdr, .3dm)."
       />
       <section className="bg-carbon text-white text-center py-16 md:py-20 px-4">
-        <h1 className="font-heading text-3xl md:text-5xl uppercase mb-4">Cómo enviar tu diseño</h1>
-        <p className="text-gray-200 max-w-2xl mx-auto mb-6">
-          Instructivos paso a paso para que tu pedido esté listo para cotizar sin ida y vuelta.
+        <h1 className="font-heading text-3xl md:text-5xl uppercase mb-4">Cómo armar tu archivo para cotizar</h1>
+        <p className="text-gray-200 max-w-2xl mx-auto">
+          Seguí estos 4 pasos para que tu archivo esté listo para cotizar y cortar sin ida y vuelta.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <a href="#corte-grabado" className="bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-5 py-2.5 text-sm">
-            Corte y grabado láser
-          </a>
-          <a href="#mate" className="bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg px-5 py-2.5 text-sm">
-            Grabado en mate
-          </a>
-        </div>
       </section>
 
-      <section id="corte-grabado" className="max-w-4xl mx-auto px-4 md:px-8 py-14 md:py-20 flex flex-col gap-16">
-        <h2 className="font-heading text-2xl md:text-3xl uppercase text-center -mb-4">
-          Corte y grabado láser: seguí estos 4 pasos
-        </h2>
+      <section className="max-w-4xl mx-auto px-4 md:px-8 py-14 md:py-20 flex flex-col gap-16">
         <StepBlock number="1" title="Materialidad y espesor">
           <p>Elegí el material y espesor de tu pieza. Trabajamos placas de 900x600mm y 600x300mm.</p>
           <div className="mt-4">
@@ -118,9 +71,11 @@ export default function ComoArmarTuArchivo() {
         <StepBlock number="3" title="Asignale sus colores">
           <p>Usá estos colores de línea para indicar qué tiene que hacer el láser en cada trazo:</p>
           <ul className="mt-3 space-y-2">
-            <li className="flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-red-600 inline-block" /> Línea roja = cortar</li>
-            <li className="flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-blue-600 inline-block" /> Línea azul = marcar</li>
-            <li className="flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-green-600 inline-block" /> Línea verde = grabar</li>
+            {LINE_COLORS.map((c) => (
+              <li key={c.key} className="flex items-center gap-2">
+                <span className={`w-4 h-4 rounded-full ${c.dot} inline-block`} /> {c.label}
+              </li>
+            ))}
           </ul>
           <p className="mt-4 text-sm text-gray-text">
             Te lo cotizamos, nos confirmás, lo hacemos y lo pasás a buscar. ¡Gracias!
@@ -130,7 +85,7 @@ export default function ComoArmarTuArchivo() {
         <StepBlock number="4" title="Enviá tu archivo por mail">
           <p>Aceptamos los siguientes formatos:</p>
           <ul className="mt-3 grid grid-cols-2 gap-2">
-            {PROGRAMS.map((p) => (
+            {FILE_PROGRAMS.map((p) => (
               <li key={p} className="bg-gray-light rounded-lg px-3 py-2 text-sm">{p}</li>
             ))}
           </ul>
@@ -180,52 +135,6 @@ export default function ComoArmarTuArchivo() {
             Enviar archivo a {SITE.fileSubmissionEmail}
           </a>
         </StepBlock>
-      </section>
-
-      <section id="mate" className="bg-gray-light py-14 md:py-20 scroll-mt-16">
-        <div className="max-w-4xl mx-auto px-4 md:px-8">
-          <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-4">
-            Cómo enviar tu diseño para grabado en mate
-          </h2>
-          <p className="text-gray-text text-center max-w-2xl mx-auto mb-12">
-            Pasos a seguir para poder grabar el mate.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10 mb-12">
-            {MATE_STEPS.map((step, i) => (
-              <div key={step.title} className="flex gap-4 items-start">
-                <span className="font-heading text-orange text-4xl leading-none shrink-0 select-none">{i + 1}</span>
-                <div>
-                  <p className="font-semibold text-sm uppercase mb-1">{step.title}</p>
-                  <p className="text-sm text-gray-text">{step.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-orange/10 border border-orange rounded-xl p-6">
-            <p className="flex items-center gap-2 font-heading uppercase text-orange-dark mb-4">
-              <AlertTriangle size={20} /> Importante
-            </p>
-            <div className="flex flex-col gap-4">
-              {MATE_WARNINGS.map((w) => (
-                <div key={w.title}>
-                  <p className="font-semibold text-sm">{w.title}</p>
-                  <p className="text-sm text-gray-text">{w.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <a
-            href={buildWhatsappLink('Hola! Quiero enviar mi diseño para grabado en mate.')}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block mt-8 bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
-          >
-            Enviar diseño de mate por WhatsApp
-          </a>
-        </div>
       </section>
 
       <section className="bg-carbon text-white py-16 md:py-20">
