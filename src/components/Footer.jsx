@@ -19,9 +19,7 @@ export default function Footer() {
     <footer className="bg-carbon text-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <p className="font-heading text-lg mb-3">
-            CIUDAD<span className="text-accent-gradient">DEL</span>LÁSER
-          </p>
+          <img src="/Ciudad-Del-Laser-Logo-2.png" alt="Ciudad del Láser" className="h-10 w-auto mb-3" />
           <p className="text-sm text-gray-text mb-4">Corte y grabado láser a medida en {SITE.city}.</p>
           <a
             href={SITE.instagramUrl}

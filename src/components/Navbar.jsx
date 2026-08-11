@@ -50,8 +50,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-carbon/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 h-16">
-        <Link to="/" className="font-heading text-lg text-white">
-          CIUDAD<span className="text-accent-gradient">DEL</span>LÁSER
+        <Link to="/" className="flex items-center">
+          <img src="/Ciudad-Del-Laser-Logo-2.png" alt="Ciudad del Láser" className="h-10 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6">
