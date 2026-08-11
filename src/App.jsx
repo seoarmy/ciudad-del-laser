@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsappFloatingButton from './components/WhatsappFloatingButton';
@@ -7,18 +7,18 @@ import JsonLd from './components/JsonLd';
 import { SITE, SITE_URL } from './data/site';
 
 import Home from './pages/Home';
-import ServiceLanding from './pages/ServiceLanding';
-import Materiales from './pages/Materiales';
-import Galeria from './pages/Galeria';
-import Personalizador from './pages/Personalizador';
-import ComoArmarTuArchivo from './pages/ComoArmarTuArchivo';
-import EnviosYPagos from './pages/EnviosYPagos';
-import PreguntasFrecuentes from './pages/PreguntasFrecuentes';
-import DondeEstamos from './pages/DondeEstamos';
-import Contacto from './pages/Contacto';
-import BlogIndex from './pages/blog/BlogIndex';
-import BlogPostPage from './pages/blog/BlogPostPage';
-import NotFound from './pages/NotFound';
+const ServiceLanding = lazy(() => import('./pages/ServiceLanding'));
+const Materiales = lazy(() => import('./pages/Materiales'));
+const Galeria = lazy(() => import('./pages/Galeria'));
+const Personalizador = lazy(() => import('./pages/Personalizador'));
+const ComoArmarTuArchivo = lazy(() => import('./pages/ComoArmarTuArchivo'));
+const EnviosYPagos = lazy(() => import('./pages/EnviosYPagos'));
+const PreguntasFrecuentes = lazy(() => import('./pages/PreguntasFrecuentes'));
+const DondeEstamos = lazy(() => import('./pages/DondeEstamos'));
+const Contacto = lazy(() => import('./pages/Contacto'));
+const BlogIndex = lazy(() => import('./pages/blog/BlogIndex'));
+const BlogPostPage = lazy(() => import('./pages/blog/BlogPostPage'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
@@ -54,21 +54,23 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/servicios/:slug" element={<ServiceLanding />} />
-          <Route path="/materiales" element={<Materiales />} />
-          <Route path="/galeria" element={<Galeria />} />
-          <Route path="/personalizador" element={<Personalizador />} />
-          <Route path="/como-armar-tu-archivo" element={<ComoArmarTuArchivo />} />
-          <Route path="/envios-y-pagos" element={<EnviosYPagos />} />
-          <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
-          <Route path="/donde-estamos" element={<DondeEstamos />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/blog" element={<BlogIndex />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/servicios/:slug" element={<ServiceLanding />} />
+            <Route path="/materiales" element={<Materiales />} />
+            <Route path="/galeria" element={<Galeria />} />
+            <Route path="/personalizador" element={<Personalizador />} />
+            <Route path="/como-armar-tu-archivo" element={<ComoArmarTuArchivo />} />
+            <Route path="/envios-y-pagos" element={<EnviosYPagos />} />
+            <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
+            <Route path="/donde-estamos" element={<DondeEstamos />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
       <WhatsappFloatingButton />

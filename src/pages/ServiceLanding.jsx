@@ -36,6 +36,8 @@ export default function ServiceLanding() {
   if (!service) return <Navigate to="/" replace />;
 
   const applicableColors = LINE_COLORS.filter((c) => service.materials.some((m) => m[c.key]));
+  const CUT_ONLY_SERVICES = ['corte-laser-mdf', 'corte-laser-acrilico', 'corte-laser-maquetas'];
+  const needsFileSubmissionGuide = CUT_ONLY_SERVICES.includes(service.slug);
 
   const waMessage = `Hola! Quiero cotizar: ${service.title}.`;
   const pageUrl = `${SITE_URL}/servicios/${service.slug}`;
@@ -84,7 +86,7 @@ export default function ServiceLanding() {
             href={buildWhatsappLink(waMessage)}
             target="_blank"
             rel="noreferrer"
-            className="bg-accent-gradient text-white font-semibold rounded-lg px-8 py-3"
+            className="bg-accent-gradient text-carbon font-semibold rounded-lg px-8 py-3"
           >
             Cotizar por WhatsApp
           </MagneticButton>
@@ -110,6 +112,7 @@ export default function ServiceLanding() {
         </div>
       </section>
 
+      {needsFileSubmissionGuide && (
       <section className="max-w-4xl mx-auto px-4 md:px-8 py-14 md:py-20">
         <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-2">Cómo enviarnos tu diseño</h2>
         <p className="text-gray-text text-center mb-10">3 pasos y listo para cotizar.</p>
@@ -171,35 +174,6 @@ export default function ServiceLanding() {
           </div>
         </div>
       </section>
-
-      {service.sizePriceTable && (
-        <section className="max-w-4xl mx-auto px-4 md:px-8 py-14 md:py-20">
-          <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-4">Medidas y precios</h2>
-          {service.sizePriceTable.note && (
-            <p className="text-gray-text text-center mb-8">{service.sizePriceTable.note}</p>
-          )}
-          <div className="overflow-x-auto rounded-lg border border-gray-lighter">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="bg-carbon text-white">
-                  <th className="text-left px-4 py-2 font-semibold">Medida (cm)</th>
-                  <th className="text-left px-4 py-2 font-semibold">Precio</th>
-                </tr>
-              </thead>
-              <tbody>
-                {service.sizePriceTable.rows.map((row, i) => (
-                  <tr key={row.size} className={i % 2 ? 'bg-gray-light' : 'bg-white'}>
-                    <td className="px-4 py-2 font-medium">{row.size}</td>
-                    <td className="px-4 py-2 text-gray-text">${row.price.toLocaleString('es-AR')}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          {service.productionNote && (
-            <p className="mt-6 text-sm text-gray-text text-center">✅ {service.productionNote}</p>
-          )}
-        </section>
       )}
 
       {service.accessories && (

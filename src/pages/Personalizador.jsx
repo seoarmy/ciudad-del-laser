@@ -1,10 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AlertTriangle } from 'lucide-react';
 import Seo from '../components/Seo';
 import ComparisonTable from '../components/ComparisonTable';
 import WhatsIncluded from '../components/WhatsIncluded';
-import MateCustomizer from '../components/personalizador/MateCustomizer';
-import PlacaCustomizer from '../components/personalizador/PlacaCustomizer';
 import { buildWhatsappLink } from '../data/site';
 
 const MATE_STEPS = [
@@ -59,22 +57,37 @@ const SIZE_COMPARISON = {
   ],
 };
 
-function TabButton({ active, onClick, children }) {
+const IFRAME_WIDTH = 1024;
+const IFRAME_HEIGHT = 900;
+
+function VirolasIframe() {
+  const wrapperRef = useRef(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+    const update = () => setScale(Math.min(1, el.offsetWidth / IFRAME_WIDTH));
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <button
-      onClick={onClick}
-      className={`px-6 py-3 rounded-lg font-semibold text-sm transition-colors ${
-        active ? 'bg-orange text-carbon' : 'bg-gray-light text-carbon hover:bg-gray-lighter'
-      }`}
-    >
-      {children}
-    </button>
+    <div ref={wrapperRef} style={{ height: IFRAME_HEIGHT * scale }}>
+      <iframe
+        src="https://ember.com.ar/virolas/index.php"
+        title="Personalizador de mates y placas"
+        loading="lazy"
+        className="block mx-auto border-0 rounded-xl origin-top"
+        style={{ width: IFRAME_WIDTH, height: IFRAME_HEIGHT, transform: `scale(${scale})` }}
+      />
+    </div>
   );
 }
 
 export default function Personalizador() {
-  const [tab, setTab] = useState('mates');
-
   return (
     <>
       <Seo
@@ -88,30 +101,22 @@ export default function Personalizador() {
         </p>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 md:px-8 py-14 md:py-20">
-        <div className="flex gap-3 justify-center mb-12">
-          <TabButton active={tab === 'mates'} onClick={() => setTab('mates')}>Mates</TabButton>
-          <TabButton active={tab === 'placas'} onClick={() => setTab('placas')}>Placas</TabButton>
-        </div>
-
-        {tab === 'mates' ? <MateCustomizer /> : <PlacaCustomizer />}
+      <section className="px-4 md:px-8 py-14 md:py-20">
+        <VirolasIframe />
       </section>
 
       <section className="max-w-5xl mx-auto px-4 md:px-8 pb-14 md:pb-20">
         <WhatsIncluded items={PERSONALIZADOR_INCLUDES} />
       </section>
 
-      {tab === 'placas' && (
-        <section className="bg-gray-light py-14 md:py-20">
-          <div className="max-w-5xl mx-auto px-4 md:px-8">
-            <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-8">Tamaños de placa disponibles</h2>
-            <ComparisonTable {...SIZE_COMPARISON} />
-          </div>
-        </section>
-      )}
+      <section className="bg-gray-light py-14 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 md:px-8">
+          <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-8">Tamaños de placa disponibles</h2>
+          <ComparisonTable {...SIZE_COMPARISON} />
+        </div>
+      </section>
 
-      {tab === 'mates' && (
-        <section className="bg-gray-light py-14 md:py-20">
+      <section className="bg-gray-light py-14 md:py-20">
           <div className="max-w-4xl mx-auto px-4 md:px-8">
             <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-4">
               Cómo enviarnos tu diseño de mate
@@ -156,7 +161,6 @@ export default function Personalizador() {
             </a>
           </div>
         </section>
-      )}
     </>
   );
 }

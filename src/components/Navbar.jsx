@@ -67,7 +67,7 @@ export default function Navbar() {
           href={buildWhatsappLink('Hola! Quiero cotizar un trabajo de corte/grabado láser.')}
           target="_blank"
           rel="noreferrer"
-          className="hidden lg:inline-block bg-accent-gradient text-white font-semibold rounded-lg px-5 py-2 text-sm"
+          className="hidden lg:inline-block bg-accent-gradient text-carbon font-semibold rounded-lg px-5 py-2 text-sm"
         >
           Cotizar
         </MagneticButton>
@@ -112,7 +112,7 @@ export default function Navbar() {
             href={buildWhatsappLink('Hola! Quiero cotizar un trabajo de corte/grabado láser.')}
             target="_blank"
             rel="noreferrer"
-            className="bg-accent-gradient text-white font-semibold rounded-lg px-5 py-2 text-sm text-center mt-2"
+            className="bg-accent-gradient text-carbon font-semibold rounded-lg px-5 py-2 text-sm text-center mt-2"
           >
             Cotizar
           </a>

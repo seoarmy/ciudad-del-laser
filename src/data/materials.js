@@ -54,7 +54,7 @@ export const MATERIAL_FAMILIES = [
     label: 'Otros',
     items: [
       { material: 'Polyfan', cortar: true, marcar: false, grabar: false, espesor: '10, 20, 25 y 30mm', tamaño: '900x600mm', stock: 'siempre' },
-      { material: 'Goma EVA', cortar: true, marcar: true, grabar: true, espesor: 'hasta 15mm', tamaño: '900x600mm', stock: 'a-pedido' },
+      { material: 'Goma EVA', cortar: true, marcar: true, grabar: true, espesor: 'hasta 12mm', tamaño: '900x600mm', stock: 'a-pedido' },
       { material: 'Corcho', cortar: true, marcar: true, grabar: true, espesor: 'hasta 5mm', tamaño: '900x600mm', stock: 'a-pedido' },
     ],
   },

@@ -39,7 +39,7 @@ export default function SeoKeywordSection({ title, paragraph, highlights, image,
             href={buildWhatsappLink(waMessage)}
             target="_blank"
             rel="noreferrer"
-            className="bg-accent-gradient text-white font-semibold rounded-lg px-6 py-3 text-sm"
+            className="bg-accent-gradient text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
           >
             Cotizar por WhatsApp
           </MagneticButton>

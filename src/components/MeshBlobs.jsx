@@ -7,7 +7,7 @@ export default function MeshBlobs() {
       />
       <div
         className="animate-drift absolute top-1/3 -right-32 w-[36rem] h-[36rem] rounded-full blur-3xl opacity-30"
-        style={{ background: 'radial-gradient(circle, #FF2D78 0%, transparent 70%)', animationDelay: '3s' }}
+        style={{ background: 'radial-gradient(circle, #FFA23A 0%, transparent 70%)', animationDelay: '3s' }}
       />
     </div>
   );

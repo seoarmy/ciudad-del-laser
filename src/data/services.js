@@ -210,22 +210,6 @@ export const SERVICES = [
       { material: 'Acrílico color', cortar: true, marcar: false, grabar: true, espesor: '3-5mm', tamaño: 'a medida', stock: true },
       { material: 'MDF con pintura', cortar: true, marcar: false, grabar: true, espesor: '9mm', tamaño: 'a medida', stock: true },
     ],
-    sizePriceTable: {
-      note: 'Podemos hacer medidas personalizadas, pero las más solicitadas son estas:',
-      rows: [
-        { size: '10x10', price: 20000 },
-        { size: '20x20', price: 30000 },
-        { size: '30x20', price: 40000 },
-        { size: '30x30', price: 48000 },
-        { size: '40x30', price: 55000 },
-        { size: '40x40', price: 70000 },
-        { size: '50x40', price: 80000 },
-        { size: '50x50', price: 90000 },
-        { size: '60x50', price: 120000 },
-        { size: '60x60', price: 140000 },
-        { size: '70x60', price: 160000 },
-      ],
-    },
     productionNote:
       'El tiempo de demora es de 72hs hábiles máximo, una vez que se acredita el pago de la seña. La cual debe ser del 50% del trabajo.',
     accessories: [

@@ -73,7 +73,7 @@ export default function Home() {
               href={buildWhatsappLink('Hola! Quiero cotizar un trabajo de corte/grabado láser.')}
               target="_blank"
               rel="noreferrer"
-              className="bg-accent-gradient text-white font-semibold rounded-lg px-8 py-3 shadow-lg shadow-orange/20"
+              className="bg-accent-gradient text-carbon font-semibold rounded-lg px-8 py-3 shadow-lg shadow-orange/20"
             >
               Cotizar por WhatsApp
             </MagneticButton>
@@ -141,7 +141,7 @@ export default function Home() {
             <p className="text-gray-text text-sm mb-6">Elegí texto, tipografía y logo para tu mate personalizado.</p>
             <Link
               to="/personalizador"
-              className="inline-block bg-accent-gradient text-white font-semibold rounded-lg px-6 py-3 text-sm"
+              className="inline-block bg-accent-gradient text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
             >
               Personalizar mate
             </Link>
@@ -156,7 +156,7 @@ export default function Home() {
             <p className="text-gray-text text-sm mb-6">Definí tamaño, texto y logo para tu placa a medida.</p>
             <Link
               to="/personalizador"
-              className="inline-block bg-accent-gradient text-white font-semibold rounded-lg px-6 py-3 text-sm"
+              className="inline-block bg-accent-gradient text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
             >
               Personalizar placa
             </Link>
