@@ -11,7 +11,7 @@ export const SERVICES = [
     heroSubtitle:
       'Piezas técnicas, decorativas y de diseño cortadas con precisión milimétrica sobre MDF, en el espesor que necesites.',
     description: [
-      'El MDF es uno de los materiales más pedidos para corte láser por su versatilidad: sirve tanto para piezas técnicas y prototipos como para objetos decorativos, cajas, letras corpóreas y muebles a medida.',
+      'En Ciudad del Láser el MDF es uno de los materiales más pedidos para corte láser por su versatilidad: sirve tanto para piezas técnicas y prototipos como para objetos decorativos, cajas, letras corpóreas y muebles a medida.',
       'Trabajamos espesores desde 3mm hasta 9mm, con cortes limpios y sin quemado excesivo del borde gracias a la calibración de potencia y velocidad según cada espesor.',
       'Enviás tu archivo vectorial (o te ayudamos a armarlo) y te cotizamos según superficie de corte y cantidad de piezas.',
     ],
@@ -21,7 +21,7 @@ export const SERVICES = [
       { material: 'MDF 9mm', cortar: true, marcar: true, grabar: true, espesor: '9mm', tamaño: 'hasta 900x600mm', stock: true },
     ],
     seoParagraph:
-      'Ya sea una sola pieza o una tirada grande para producción, cotizamos el corte de MDF según espesor y superficie de la placa. También podés sumar grabado en la misma pieza, sin costo adicional de setup.',
+      'En Ciudad del Láser cotizamos el corte de MDF según espesor y superficie de la placa, ya sea una sola pieza o una tirada grande para producción. También podés sumar grabado en la misma pieza, sin costo adicional de setup.',
     secondaryKeywords: [
       'corte de mdf',
       'mdf para corte láser',
@@ -58,7 +58,7 @@ export const SERVICES = [
     heroSubtitle:
       'Marcado permanente sobre acero inoxidable, aluminio y bronce para identificación, placas y piezas industriales.',
     description: [
-      'El grabado láser sobre metal deja una marca permanente, resistente a la intemperie, al roce y a la limpieza, ideal para placas identificatorias, numeración de piezas, herramientas y cartelería industrial.',
+      'En Ciudad del Láser el grabado láser sobre metal deja una marca permanente, resistente a la intemperie, al roce y a la limpieza, ideal para placas identificatorias, numeración de piezas, herramientas y cartelería industrial.',
       'Trabajamos sobre acero inoxidable, aluminio anodizado y bronce, con distintos niveles de contraste y profundidad según el acabado que busques.',
       'Es un proceso sin tintas ni adhesivos: el grabado es parte de la superficie del metal, por lo que no se despega ni se borra con el tiempo.',
     ],
@@ -69,7 +69,7 @@ export const SERVICES = [
       { material: 'Aluminio natural', cortar: false, marcar: true, grabar: false, espesor: '0.5-2mm', tamaño: 'a medida', stock: false },
     ],
     seoParagraph:
-      'Trabajamos piezas de precisión, identificación industrial y objetos personalizados sobre distintos metales. El precio varía según el material, la cantidad y el detalle del grabado, así que consultanos con tu proyecto.',
+      'En Ciudad del Láser trabajamos piezas de precisión, identificación industrial y objetos personalizados sobre distintos metales. El precio varía según el material, la cantidad y el detalle del grabado, así que consultanos con tu proyecto.',
     secondaryKeywords: [
       'grabado láser en metal precio',
       'grabado sobre metal',
@@ -105,7 +105,7 @@ export const SERVICES = [
     heroSubtitle:
       'Grabado láser en maderas nobles y corte de piezas decorativas: cuadros, cajas, souvenirs y regalos personalizados.',
     description: [
-      'Trabajamos maderas terciadas y nobles para corte y grabado láser, ideal para piezas decorativas, cajas, cuadros con frases o fotos, y regalos empresariales personalizados.',
+      'En Ciudad del Láser trabajamos maderas terciadas y nobles para corte y grabado láser, ideal para piezas decorativas, cajas, cuadros con frases o fotos, y regalos empresariales personalizados.',
       'El grabado láser (también conocido como impresión láser en madera) resalta la veta natural, logrando un acabado cálido que no se consigue con otras técnicas de marcado.',
       'También cortamos piezas técnicas y de ensamble en madera terciada para maquetas, organizadores y estructuras simples.',
     ],
@@ -116,7 +116,7 @@ export const SERVICES = [
       { material: 'Madera maciza (roble, pino)', cortar: true, marcar: false, grabar: true, espesor: 'variable', tamaño: 'a medida', stock: false },
     ],
     seoParagraph:
-      'El corte y el grabado se pueden combinar en la misma pieza: cortamos la forma y grabamos texto, logos o imágenes sobre la superficie. El precio varía según el tipo de madera y el espesor, así que consultanos con tu proyecto.',
+      'En Ciudad del Láser combinamos corte y grabado en la misma pieza: cortamos la forma y grabamos texto, logos o imágenes sobre la superficie. El precio varía según el tipo de madera y el espesor, así que consultanos con tu proyecto.',
     secondaryKeywords: [
       'corte de madera por láser',
       'corte láser madera precios',
@@ -152,7 +152,7 @@ export const SERVICES = [
     heroSubtitle:
       'Corte y grabado láser en acrílico con bordes pulidos, colores cristal y opal, ideal para letras corpóreas, displays, señalética y diseños personalizados.',
     description: [
-      'El acrílico cortado con láser tiene un plus que otros materiales no logran: el borde queda pulido directamente al cortar, sin necesidad de proceso adicional.',
+      'En Ciudad del Láser el acrílico cortado con láser tiene un plus que otros materiales no logran: el borde queda pulido directamente al cortar, sin necesidad de proceso adicional.',
       'Además del corte, el grabado permite sumar texto, logos e ilustraciones sobre la pieza, ideal para diseños que combinan forma y detalle en un mismo trabajo.',
       'Es el material elegido para letras corpóreas, displays de producto, señalética, trofeos y piezas de diseño donde la terminación importa tanto como la forma.',
       'Trabajamos acrílico cristal (transparente), opal (blanco translúcido) y en color, en distintos espesores según el uso.',
@@ -164,7 +164,7 @@ export const SERVICES = [
       { material: 'Acrílico color', cortar: true, marcar: false, grabar: true, espesor: '3-5mm', tamaño: 'hasta 900x600mm', stock: false },
     ],
     seoParagraph:
-      'El corte define la forma de la pieza y el grabado suma detalle, texto o logo sobre la superficie: dos procesos que combinamos en un mismo diseño para lograr una terminación prolija.',
+      'En Ciudad del Láser el corte define la forma de la pieza y el grabado suma detalle, texto o logo sobre la superficie: dos procesos que combinamos en un mismo diseño para lograr una terminación prolija.',
     secondaryKeywords: [
       'diseños en acrílico corte láser',
       'grabado en acrílico',
@@ -199,7 +199,7 @@ export const SERVICES = [
     heroSubtitle:
       'Placas homenaje con terminación que simula acero o bronce, grabadas con láser para instituciones, empresas y aniversarios, con texto, logo y fecha de forma permanente.',
     description: [
-      'Hacemos placas conmemorativas con terminación que simula el acero y el bronce: fondo color bronce o color acero, con el texto en negro. Son aptas para exterior y mantienen el contraste con el paso del tiempo.',
+      'En Ciudad del Láser hacemos placas conmemorativas con terminación que simula el acero y el bronce: fondo color bronce o color acero, con el texto en negro. Son aptas para exterior y mantienen el contraste con el paso del tiempo.',
       'Podemos colocar una madera enchapada negra de fondo, para darle más cuerpo a la placa.',
       'Coordinamos el diseño del layout de texto y logo antes de producir, para que apruebes el arte final antes del grabado.',
       'Podemos hacer factura A o C, cada una con sus respectivos costos impositivos.',
@@ -227,7 +227,7 @@ export const SERVICES = [
       },
     ],
     seoParagraph:
-      'Producimos placas para inauguraciones, aniversarios y actos institucionales, además de reconocimientos personalizados para premiar logros de empleados, socios o instituciones. Cada placa se graba con texto y logo a medida, con terminación que simula acero o bronce.',
+      'En Ciudad del Láser producimos placas para inauguraciones, aniversarios y actos institucionales, además de reconocimientos personalizados para premiar logros de empleados, socios o instituciones. Cada placa se graba con texto y logo a medida, con terminación que simula acero o bronce.',
     secondaryKeywords: [
       'placa conmemorativa personalizada',
       'placas conmemorativas grabadas',
@@ -264,7 +264,7 @@ export const SERVICES = [
     heroSubtitle:
       'Grabado láser de precisión sobre placas de mármol, ideal para homenajes, lápidas y piezas decorativas de alta durabilidad.',
     description: [
-      'El grabado en mármol con láser permite marcar texto, fechas, fotos e imágenes sobre la piedra con un detalle que no se logra con técnicas manuales, manteniendo un acabado prolijo y duradero.',
+      'En Ciudad del Láser el grabado en mármol con láser permite marcar texto, fechas, fotos e imágenes sobre la piedra con un detalle que no se logra con técnicas manuales, manteniendo un acabado prolijo y duradero.',
       'Es un material elegido para homenajes, lápidas y piezas conmemorativas por su resistencia a la intemperie y su terminación premium.',
       'Trabajamos sobre placas de mármol de distintos tamaños; contanos las medidas y el diseño que necesitás grabar.',
     ],
@@ -274,7 +274,7 @@ export const SERVICES = [
       { material: 'Granito', cortar: false, marcar: false, grabar: true, espesor: 'variable', tamaño: 'a medida', stock: false },
     ],
     seoParagraph:
-      'Es una alternativa premium a las placas metálicas para homenajes y piezas decorativas. También trabajamos sobre granito y otras piedras compatibles con láser, con la misma precisión que en las placas conmemorativas.',
+      'En Ciudad del Láser ofrecemos una alternativa premium a las placas metálicas para homenajes y piezas decorativas. También trabajamos sobre granito y otras piedras compatibles con láser, con la misma precisión que en las placas conmemorativas.',
     secondaryKeywords: [
       'grabado sobre mármol',
       'placas de mármol grabadas',
@@ -309,7 +309,7 @@ export const SERVICES = [
     heroSubtitle:
       'Placas homenaje grabadas con láser, resistentes a la intemperie, con texto, foto e imágenes religiosas a pedido.',
     description: [
-      'Elaboramos placas para nicho y lápidas con grabado láser permanente, pensadas para resistir años de exposición a la intemperie sin perder legibilidad.',
+      'En Ciudad del Láser elaboramos placas para nicho y lápidas con grabado láser permanente, pensadas para resistir años de exposición a la intemperie sin perder legibilidad.',
       'Podés incluir texto personalizado, fechas, foto grabada de la persona e imágenes religiosas u ornamentos según se prefiera.',
       'Trabajamos con materiales de bajo mantenimiento (acero inoxidable, bronce, acrílico) que no requieren pintura ni retoque posterior.',
     ],
@@ -319,7 +319,7 @@ export const SERVICES = [
       { material: 'Acrílico color', cortar: true, marcar: false, grabar: true, espesor: '3mm', tamaño: 'a medida', stock: true },
     ],
     seoParagraph:
-      'Hacemos placas en distintos tamaños y materiales, con foto grabada e imágenes religiosas a pedido. Se graban con láser para máxima durabilidad a la intemperie.',
+      'En Ciudad del Láser hacemos placas en distintos tamaños y materiales, con foto grabada e imágenes religiosas a pedido. Se graban con láser para máxima durabilidad a la intemperie.',
     secondaryKeywords: [
       'placa para nicho',
       'placa nicho',
@@ -353,7 +353,7 @@ export const SERVICES = [
     heroSubtitle:
       'Piezas de precisión milimétrica para maquetas arquitectónicas, de estudio y de producto, en múltiples materiales.',
     description: [
-      'El corte láser es el estándar para maquetas por la precisión que logra en piezas pequeñas, ensambles y detalles que serían imposibles a mano.',
+      'En Ciudad del Láser el corte láser es el estándar para maquetas por la precisión que logra en piezas pequeñas, ensambles y detalles que serían imposibles a mano.',
       'Trabajamos con estudiantes de arquitectura y diseño, estudios profesionales y makers, cortando desde una sola pieza hasta maquetas completas con múltiples partes.',
       'Podés enviarnos el archivo de corte por capas (por material o color de línea) y te asesoramos si es tu primera vez armando un archivo para láser.',
     ],
@@ -364,7 +364,7 @@ export const SERVICES = [
       { material: 'Polifan', cortar: true, marcar: true, grabar: false, espesor: '5-10mm', tamaño: 'hasta 900x600mm', stock: false },
     ],
     seoParagraph:
-      'Trabajamos con estudiantes y estudios de arquitectura, desde una maqueta de estudio simple hasta modelos con múltiples piezas y materiales combinados.',
+      'En Ciudad del Láser trabajamos con estudiantes y estudios de arquitectura, desde una maqueta de estudio simple hasta modelos con múltiples piezas y materiales combinados.',
     secondaryKeywords: [
       'corte láser maquetas arquitectura',
       'corte maquetas láser',
@@ -398,7 +398,7 @@ export const SERVICES = [
     heroSubtitle:
       'Regalos, souvenirs, merchandising empresarial y piezas únicas, personalizadas con tu texto, logo o diseño.',
     description: [
-      'Si tu proyecto no encaja en una sola categoría, esta es la línea de trabajo pensada para pedidos a medida: regalos personalizados, merchandising de marca, souvenirs de eventos y piezas únicas.',
+      'Si tu proyecto no encaja en una sola categoría, en Ciudad del Láser tenemos esta línea de trabajo pensada para pedidos a medida: regalos personalizados, merchandising de marca, souvenirs de eventos y piezas únicas.',
       'Combinamos materiales y técnicas (corte, marcado, grabado) según lo que necesite tu proyecto, con asesoramiento incluido si no sabés bien por dónde empezar.',
       'Usá nuestro personalizador online para armar una idea inicial de mates o placas, o contanos tu proyecto directo por WhatsApp.',
     ],
@@ -409,7 +409,7 @@ export const SERVICES = [
       { material: 'Corcho', cortar: true, marcar: false, grabar: true, espesor: 'variable', tamaño: 'a medida', stock: false },
     ],
     seoParagraph:
-      'Ideal para regalos de cumpleaños, egresos o aniversarios, y para merchandising de marca en eventos y lanzamientos. También armamos souvenirs para bodas y eventos corporativos.',
+      'En Ciudad del Láser esta línea es ideal para regalos de cumpleaños, egresos o aniversarios, y para merchandising de marca en eventos y lanzamientos. También armamos souvenirs para bodas y eventos corporativos.',
     secondaryKeywords: [
       'regalos personalizados láser',
       'merchandising grabado láser',
@@ -443,7 +443,7 @@ export const SERVICES = [
     heroSubtitle:
       'Carteles, letreros e indicadores cortados y grabados con láser para locales, oficinas y espacios institucionales.',
     description: [
-      'Fabricamos señalética y cartelería para locales comerciales, oficinas, consultorios y espacios institucionales, con corte y grabado láser de precisión.',
+      'En Ciudad del Láser fabricamos señalética y cartelería para locales comerciales, oficinas, consultorios y espacios institucionales, con corte y grabado láser de precisión.',
       'Trabajamos indicadores de ambientes, carteles con logo, numeración de puertas y letreros exteriores, en el material que mejor se adapte al uso interior o exterior.',
       'Coordinamos diseño de layout y tipografía antes de producir, para asegurar consistencia visual en todo el cartel.',
     ],
@@ -454,7 +454,7 @@ export const SERVICES = [
       { material: 'Aluminio anodizado', cortar: false, marcar: true, grabar: true, espesor: '0.5-2mm', tamaño: 'a medida', stock: false },
     ],
     seoParagraph:
-      'Producimos señalética interior y exterior para locales, oficinas y espacios institucionales: indicadores, numeración y carteles con logo. El precio varía según material, tamaño y cantidad, consultanos con tu proyecto.',
+      'En Ciudad del Láser producimos señalética interior y exterior para locales, oficinas y espacios institucionales: indicadores, numeración y carteles con logo. El precio varía según material, tamaño y cantidad, consultanos con tu proyecto.',
     secondaryKeywords: [
       'cartelería láser',
       'señalética para locales',

@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { AlertTriangle } from 'lucide-react';
 import Seo from '../components/Seo';
-import ComparisonTable from '../components/ComparisonTable';
 import WhatsIncluded from '../components/WhatsIncluded';
 import { buildWhatsappLink } from '../data/site';
 
@@ -47,15 +46,6 @@ const PERSONALIZADOR_INCLUDES = [
   { label: 'Empaquetado', included: true },
   { label: 'Coordinación de envío/retiro', included: false },
 ];
-
-const SIZE_COMPARISON = {
-  headers: ['15x10cm', '20x15cm', '30x20cm'],
-  recommendedIndex: 1,
-  rows: [
-    { label: 'Uso recomendado', values: ['Escritorio, souvenir', 'Pared, oficina', 'Institucional, exterior'] },
-    { label: 'Materiales sugeridos', values: ['Acrílico, MDF', 'Acrílico, MDF, metal', 'Metal, bronce'] },
-  ],
-};
 
 const IFRAME_WIDTH = 1024;
 const IFRAME_HEIGHT = 900;
@@ -107,13 +97,6 @@ export default function Personalizador() {
 
       <section className="max-w-5xl mx-auto px-4 md:px-8 pb-14 md:pb-20">
         <WhatsIncluded items={PERSONALIZADOR_INCLUDES} />
-      </section>
-
-      <section className="bg-gray-light py-14 md:py-20">
-        <div className="max-w-5xl mx-auto px-4 md:px-8">
-          <h2 className="font-heading text-2xl md:text-3xl uppercase text-center mb-8">Tamaños de placa disponibles</h2>
-          <ComparisonTable {...SIZE_COMPARISON} />
-        </div>
       </section>
 
       <section className="bg-gray-light py-14 md:py-20">

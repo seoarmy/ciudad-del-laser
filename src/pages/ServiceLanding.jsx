@@ -193,7 +193,7 @@ export default function ServiceLanding() {
       )}
 
       <SeoKeywordSection
-        title={`Todo sobre ${service.shortTitle.toLowerCase()}`}
+        title={`Todo sobre ${service.shortTitle.toLowerCase()} en ${SITE.name}`}
         paragraph={service.seoParagraph}
         highlights={service.highlights}
         image={randomImage}

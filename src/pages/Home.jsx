@@ -55,9 +55,17 @@ export default function Home() {
         description="Corte y grabado láser en MDF, acrílico, metal, madera y más. Cotizá online por WhatsApp, personalizá tu producto y recibí tu trabajo a medida en Buenos Aires."
       />
 
-      <section className="relative bg-carbon text-white overflow-hidden bg-noise">
+      <section
+        className="relative bg-carbon text-white overflow-hidden bg-noise bg-cover bg-center"
+        style={{ backgroundImage: "linear-gradient(to bottom, rgba(13,13,13,0.8), rgba(13,13,13,0.85), #0D0D0D), url('/portada%201.jpg')" }}
+      >
         <MeshBlobs />
-        <div className="relative max-w-5xl mx-auto px-4 md:px-8 py-28 md:py-40 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-8 py-28 md:py-40 text-center">
+          <img
+            src="/logo%20ciudad%20del%20laser%20png.png"
+            alt="Ciudad del Láser"
+            className="h-16 md:h-20 mx-auto mb-6"
+          />
           <span className="font-mono text-xs text-gray-text border border-white/10 rounded-full px-3 py-1 inline-block mb-6">
             infraestructura de fabricación de precisión
           </span>
@@ -128,9 +136,9 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <h2 className="font-heading text-2xl md:text-4xl text-center mb-3">Personalizá tu producto</h2>
         <p className="text-gray-text text-center max-w-xl mx-auto mb-12">
-          Armá tu mate o placa personalizada antes de pedir presupuesto.
+          Armá tu mate personalizado antes de pedir presupuesto.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-md mx-auto">
           <div className="bg-white border border-gray-lighter rounded-xl p-8 text-center hover:border-orange transition-colors">
             <img
               src="/images/METALES/5.webp"
@@ -144,21 +152,6 @@ export default function Home() {
               className="inline-block bg-accent-gradient text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
             >
               Personalizar mate
-            </Link>
-          </div>
-          <div className="bg-white border border-gray-lighter rounded-xl p-8 text-center hover:border-orange transition-colors">
-            <img
-              src="/images/PLACAS%20DE%20NICHO%20-%20CEMENTERIO/7.webp"
-              alt="Personalizador de placas"
-              className="rounded-lg mb-6 w-full h-48 object-cover"
-            />
-            <p className="font-heading text-xl mb-2">Placas</p>
-            <p className="text-gray-text text-sm mb-6">Definí tamaño, texto y logo para tu placa a medida.</p>
-            <Link
-              to="/personalizador"
-              className="inline-block bg-accent-gradient text-carbon font-semibold rounded-lg px-6 py-3 text-sm"
-            >
-              Personalizar placa
             </Link>
           </div>
         </div>
