@@ -15,7 +15,7 @@ function TransactionalBox({ serviceSlug, text }) {
     <div className="my-6 bg-orange/10 border border-orange rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
       <p className="font-semibold text-carbon">{text}</p>
       <Link
-        to={`/servicios/${service.slug}`}
+        to={`/${service.slug}`}
         className="shrink-0 bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-5 py-2 text-sm text-center transition-colors"
       >
         Ver servicio
@@ -143,7 +143,7 @@ export default function BlogPost({ post }) {
             <ul className="space-y-2">
               {relatedServices.map((s) => (
                 <li key={s.slug}>
-                  <Link to={`/servicios/${s.slug}`} className="text-sm text-carbon hover:text-orange-dark font-medium">
+                  <Link to={`/${s.slug}`} className="text-sm text-carbon hover:text-orange-dark font-medium">
                     {s.shortTitle}
                   </Link>
                 </li>

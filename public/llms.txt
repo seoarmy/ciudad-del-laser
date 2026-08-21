@@ -4,15 +4,15 @@
 
 ## Servicios
 
-- [Corte láser MDF](https://www.ciudaddellaser.com.ar/servicios/corte-laser-mdf)
-- [Grabado láser en metal](https://www.ciudaddellaser.com.ar/servicios/grabado-laser-metal)
-- [Corte y grabado láser en madera](https://www.ciudaddellaser.com.ar/servicios/grabado-laser-madera)
-- [Corte láser acrílico](https://www.ciudaddellaser.com.ar/servicios/corte-laser-acrilico)
-- [Placas conmemorativas](https://www.ciudaddellaser.com.ar/servicios/placas-conmemorativas)
-- [Grabado en mármol](https://www.ciudaddellaser.com.ar/servicios/grabado-en-marmol)
-- [Placas para nicho / cementerio](https://www.ciudaddellaser.com.ar/servicios/placas-para-nicho)
-- [Corte láser para maquetas](https://www.ciudaddellaser.com.ar/servicios/corte-laser-maquetas)
-- [Trabajos personalizados](https://www.ciudaddellaser.com.ar/servicios/trabajos-personalizados)
+- [Corte láser MDF](https://www.ciudaddellaser.com.ar/corte-laser)
+- [Grabado láser en metal](https://www.ciudaddellaser.com.ar/grabado-laser)
+- [Corte y grabado láser en madera](https://www.ciudaddellaser.com.ar/grabado-laser-madera)
+- [Corte láser acrílico](https://www.ciudaddellaser.com.ar/corte-laser-acrilico)
+- [Placas conmemorativas](https://www.ciudaddellaser.com.ar/placas-conmemorativas)
+- [Grabado en mármol](https://www.ciudaddellaser.com.ar/grabado-en-marmol)
+- [Placas para nicho / cementerio](https://www.ciudaddellaser.com.ar/placas-para-nicho)
+- [Corte láser para maquetas](https://www.ciudaddellaser.com.ar/corte-laser-maquetas)
+- [Trabajos personalizados](https://www.ciudaddellaser.com.ar/grabado-laser-personalizado)
 
 ## Recursos
 

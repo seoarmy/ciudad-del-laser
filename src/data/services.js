@@ -1,6 +1,6 @@
 export const SERVICES = [
   {
-    slug: 'corte-laser-mdf',
+    slug: 'corte-laser',
     icon: 'Scissors',
     title: 'Corte láser MDF',
     shortTitle: 'Corte láser MDF',
@@ -47,7 +47,7 @@ export const SERVICES = [
     })),
   },
   {
-    slug: 'grabado-laser-metal',
+    slug: 'grabado-laser',
     icon: 'Flame',
     title: 'Grabado láser en metal',
     shortTitle: 'Grabado en metal',
@@ -387,7 +387,7 @@ export const SERVICES = [
     })),
   },
   {
-    slug: 'trabajos-personalizados',
+    slug: 'grabado-laser-personalizado',
     icon: 'Sparkles',
     title: 'Trabajos personalizados',
     shortTitle: 'Personalizados',

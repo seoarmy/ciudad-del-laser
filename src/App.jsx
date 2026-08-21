@@ -36,7 +36,7 @@ const ORGANIZATION_SCHEMA = {
     postalCode: 'C1406',
     addressCountry: 'AR',
   },
-  sameAs: [SITE.instagramUrl],
+  sameAs: [SITE.instagramUrl, SITE.tiktokUrl, SITE.facebookUrl, SITE.youtubeUrl],
 };
 
 function ScrollToTop() {
@@ -57,7 +57,6 @@ function App() {
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/servicios/:slug" element={<ServiceLanding />} />
             <Route path="/materiales" element={<Materiales />} />
             <Route path="/galeria" element={<Galeria />} />
             <Route path="/personalizador" element={<Personalizador />} />
@@ -68,6 +67,7 @@ function App() {
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/:slug" element={<ServiceLanding />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

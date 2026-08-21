@@ -36,11 +36,11 @@ export default function ServiceLanding() {
   if (!service) return <Navigate to="/" replace />;
 
   const applicableColors = LINE_COLORS.filter((c) => service.materials.some((m) => m[c.key]));
-  const CUT_ONLY_SERVICES = ['corte-laser-mdf', 'corte-laser-acrilico', 'corte-laser-maquetas'];
+  const CUT_ONLY_SERVICES = ['corte-laser', 'corte-laser-acrilico', 'corte-laser-maquetas'];
   const needsFileSubmissionGuide = CUT_ONLY_SERVICES.includes(service.slug);
 
   const waMessage = `Hola! Quiero cotizar: ${service.title}.`;
-  const pageUrl = `${SITE_URL}/servicios/${service.slug}`;
+  const pageUrl = `${SITE_URL}/${service.slug}`;
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -102,7 +102,10 @@ export default function ServiceLanding() {
       </section>
 
       <section className="max-w-5xl mx-auto px-4 md:px-8 pb-14 md:pb-20">
-        <WhatsIncluded />
+        <WhatsIncluded
+          mailTo={!needsFileSubmissionGuide ? SITE.fileSubmissionEmail : undefined}
+          mailSubject={`Diseño ${service.title}`}
+        />
       </section>
 
       <section className="bg-gray-light py-14 md:py-20">

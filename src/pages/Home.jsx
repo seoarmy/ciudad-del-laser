@@ -6,6 +6,7 @@ import { MATERIAL_FAMILIES } from '../data/materials';
 import { buildWhatsappLink } from '../data/site';
 import Seo from '../components/Seo';
 import MarqueeGallery from '../components/MarqueeGallery';
+import LogoCarousel from '../components/LogoCarousel';
 import MeshBlobs from '../components/MeshBlobs';
 import MagneticButton from '../components/MagneticButton';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -21,7 +22,7 @@ function ServiceTile({ service }) {
   const image = useMemo(() => pickRandomImage(service.gallery), [service]);
   return (
     <Link
-      to={`/servicios/${service.slug}`}
+      to={`/${service.slug}`}
       className="group relative bg-surface border border-white/10 rounded-xl p-5 flex flex-col justify-between overflow-hidden hover:border-orange/60 transition-colors h-[190px]"
     >
       <img
@@ -187,6 +188,9 @@ export default function Home() {
 
       <section className="relative bg-carbon text-white py-16 md:py-24 text-center overflow-hidden bg-noise">
         <h2 className="font-heading text-2xl md:text-4xl mb-10">Confían en nosotros</h2>
+        <div className="mb-14">
+          <LogoCarousel />
+        </div>
         <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
           <div>
             <p className="font-heading text-4xl md:text-5xl text-accent-gradient mb-2">

@@ -45,7 +45,7 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
-  const serviceLinks = SERVICES.map((s) => ({ label: s.shortTitle, to: `/servicios/${s.slug}` }));
+  const serviceLinks = SERVICES.map((s) => ({ label: s.shortTitle, to: `/${s.slug}` }));
 
   return (
     <header className="sticky top-0 z-50 bg-carbon/80 backdrop-blur-md border-b border-white/10">
@@ -83,7 +83,7 @@ export default function Navbar() {
           {SERVICES.map((s) => (
             <Link
               key={s.slug}
-              to={`/servicios/${s.slug}`}
+              to={`/${s.slug}`}
               onClick={() => setOpen(false)}
               className="text-sm text-white/80 pl-2"
             >

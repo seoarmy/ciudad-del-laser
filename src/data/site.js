@@ -11,7 +11,10 @@ export const SITE_URL = 'https://www.ciudaddellaser.com.ar';
 export const SITE = {
   name: 'Ciudad del Láser',
   instagram: '@ciudad.del.laser',
-  instagramUrl: 'https://instagram.com/ciudad.del.laser',
+  instagramUrl: 'https://www.instagram.com/ciudad.del.laser/?hl=es',
+  tiktokUrl: 'https://www.tiktok.com/@ciudad.del.laser',
+  facebookUrl: 'https://www.facebook.com/ciudadelaser',
+  youtubeUrl: 'https://www.youtube.com/channel/UCGcYTNwii4LfPLpYHG3iJmw/videos',
   email: 'contacto@ciudaddellaser.com.ar',
   fileSubmissionEmail: 'contacto@ciudaddellaser.com.ar',
   city: 'Buenos Aires, Argentina',

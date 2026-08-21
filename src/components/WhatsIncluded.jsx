@@ -1,4 +1,4 @@
-import { Check, Circle } from 'lucide-react';
+import { Check, Circle, Mail } from 'lucide-react';
 
 const DEFAULT_ITEMS = [
   { label: 'Diseño de archivo asistido', included: true },
@@ -9,7 +9,7 @@ const DEFAULT_ITEMS = [
   { label: 'Coordinación de envío/retiro', included: false },
 ];
 
-export default function WhatsIncluded({ items = DEFAULT_ITEMS, title = '¿Qué incluye tu cotización?' }) {
+export default function WhatsIncluded({ items = DEFAULT_ITEMS, title = '¿Qué incluye tu cotización?', mailTo, mailSubject }) {
   return (
     <div>
       <h3 className="font-heading text-xl md:text-2xl uppercase mb-6">{title}</h3>
@@ -31,6 +31,17 @@ export default function WhatsIncluded({ items = DEFAULT_ITEMS, title = '¿Qué i
           </div>
         ))}
       </div>
+
+      {mailTo && (
+        <div className="mt-6 flex justify-center">
+          <a
+            href={`mailto:${mailTo}?subject=${encodeURIComponent(mailSubject || '')}`}
+            className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark text-carbon font-semibold rounded-lg px-6 py-3 text-sm transition-colors"
+          >
+            <Mail size={16} /> Enviar diseño a {mailTo}
+          </a>
+        </div>
+      )}
     </div>
   );
 }

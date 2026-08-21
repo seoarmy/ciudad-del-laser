@@ -22,12 +22,12 @@ export const TESTIMONIALS = [
   {
     name: 'Daniela Franceschetti',
     quote: 'Me ayudaron a concretar uno de los primeros regalos personalizados en cuero para mi emprendimiento. No solo buscaron soluciones, cumplieron con la fecha de entrega.',
-    service: 'trabajos-personalizados',
+    service: 'grabado-laser-personalizado',
   },
   {
     name: 'Sharon Cohen',
     quote: 'Quedó hermoso, unos genios. El primer dibujo de mi hijo para el día del padre.',
-    service: 'trabajos-personalizados',
+    service: 'grabado-laser-personalizado',
   },
   {
     name: 'Mariana Troitiño',
@@ -37,17 +37,17 @@ export const TESTIMONIALS = [
   {
     name: 'Guada Astudillo',
     quote: 'Hicimos un pedido de grabado de botellas térmicas para la empresa donde trabajo y el resultado fue excelente. Quedamos muy satisfechos.',
-    service: 'grabado-laser-metal',
+    service: 'grabado-laser',
   },
   {
     name: 'Nicolas Alvarez',
     quote: '10 puntos el grabado láser sobre una medalla de metal. Excelente servicio.',
-    service: 'grabado-laser-metal',
+    service: 'grabado-laser',
   },
   {
     name: 'Joaquín V. González',
     quote: 'Buen trabajo en el grabado de medallas para un establecimiento educativo y rapidez en la entrega.',
-    service: 'grabado-laser-metal',
+    service: 'grabado-laser',
   },
 ];
 

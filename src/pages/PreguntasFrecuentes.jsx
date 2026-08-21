@@ -43,7 +43,7 @@ export default function PreguntasFrecuentes() {
             {SERVICES.map((s) => (
               <Link
                 key={s.slug}
-                to={`/servicios/${s.slug}`}
+                to={`/${s.slug}`}
                 className="bg-white border border-gray-lighter hover:border-orange rounded-lg px-4 py-2 text-sm font-semibold"
               >
                 {s.shortTitle}
